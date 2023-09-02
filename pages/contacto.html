@@ -29,43 +29,133 @@
 
 <body>
 
-    <header id="header">
+  <header id="header">
 
-        <!-- navbar bs -->
+    <!-- navbar bs -->
 
+    <div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link" href="cuenta.html">Mi cuenta</a>
+                <a class="nav-link" href="productos.html">Productos</a>
+                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                <a class="nav-link" href="carrito.html">Carrito</a>
+              </div>
+            </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- logo -->
+
+    <div>
+      <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
+    </div>
+
+    <!-- demás imgs del header -->
+
+    <div>
+      <a href="cuenta.html"><img src="../multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo"></a>
+      <a href="carrito.html"><img src="../multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo"></a>
+    </div>
+
+  </header>
+
+  <!-- main -->
+
+  <main>
+
+    <h1>Contacto</h1>
+
+    <section class="contact">
+
+      <article class="contact-form">
+          <h2 class="contacto-h2">Formulario de contato.</h2>
+
+              <form action="">
+
+                  <label for="name">Nombre y Apellido (requerido):</label>
+                  <input type="text" name="name" required>
+                  
+                  <label for="email">Email (requerido):</label>
+                  <input type="email" name="email" required>
+
+                  <label for="id-compra">Orden de Compra (opcional):</label>
+                  <input type="text" name="id-compra">
+
+                  <label for="phone">Telefono (opcional):</label>
+                  <input type="phone" name="phone">
+
+                  <label for="message">Mensaje:</label>
+                  <textarea name="message" cols="40" rows="3"></textarea>
+                  
+              </form>
+      </article>
+
+      <article class="contact-others">
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-link" href="../index.html">Inicio</a>
-                      <a class="nav-link" href="cuenta.html">Mi cuenta</a>
-                      <a class="nav-link" href="productos.html">Productos</a>
-                      <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                      <a class="nav-link" href="carrito.html">Carrito</a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+          <h2 class="contacto-h2">Compras y ventas mayoristas:</h2>
+          <a href="https://www.gmail.com"><img src="../multimedia/email.png" alt="mail-para-contacto"></a>
+          <span><a href="https://www.gmail.com">moonmakeup@gmail.com</a></span>
         </div>
 
-        <!-- logo -->
-
         <div>
-            <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
+          <h2 class="contacto-h2">Pedidos por whatsapp:</h2>
+          <a href="https://www.whatsapp.com"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
+          <span><a href="https://www.whatsapp.com">011 1234 5678</a></span>
         </div>
 
-        <!-- demás imgs del header -->
-
         <div>
-            <a href="cuenta.html"><img src="" alt="Mi-Cuenta-Acceso-Directo"></a>
-            <a href="carrito.html"><img src="" alt="Carrito-Acceso-Directo"></a>
+          <h2 class="contacto-h2">Redes sociales:</h2>
+          <a href="https://www.instagram.com"><img src="../multimedia/instagram.png" alt="redireccionamiento-a-nuestro-instagram"></a>
+          <a href="https://www.facebook.com"><img src="../multimedia/facebook.png" alt="redireccionamiento-a-nuestro-facebook"></a>
         </div>
+      </article>
 
-    </header>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+
+  <footer>
+
+    <section>
+    
+      <!-- envios -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pedidos por whatsapp -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pendiente contenido -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+    </section>
+    
+  </footer>
+    
+  <!-- img fixed con redireccionamiento a whatsapp -->
+    
+  <a href="https://www.whatsapp.com"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
 
 
     <!-- script bs -->

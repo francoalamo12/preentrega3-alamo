@@ -29,43 +29,142 @@
 
 <body>
 
-    <header id="header">
+  <!-- header -->
 
-        <!-- navbar bs -->
+  <header id="header">
 
-        <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-link" href="../index.html">Inicio</a>
-                      <a class="nav-link active" aria-current="page" href="cuenta.html">Mi cuenta</a>
-                      <a class="nav-link" href="productos.html">Productos</a>
-                      <a class="nav-link" href="contacto.html">Contacto</a>
-                      <a class="nav-link" href="carrito.html">Carrito</a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+    <!-- navbar bs -->
+
+    <div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="cuenta.html">Mi cuenta</a>
+                <a class="nav-link" href="productos.html">Productos</a>
+                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link" href="carrito.html">Carrito</a>
+              </div>
+            </div>
         </div>
+      </nav>
+    </div>
 
-        <!-- logo -->
+    <!-- logo -->
 
-        <div>
-            <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
-        </div>
+    <div>
+      <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
+    </div>
 
-        <!-- demás imgs del header -->
+    <!-- demás imgs del header -->
 
-        <div>
-            <a href="cuenta.html"><img src="" alt="Mi-Cuenta-Acceso-Directo"></a>
-            <a href="carrito.html"><img src="" alt="Carrito-Acceso-Directo"></a>
-        </div>
+    <div>
+      <a href="cuenta.html"><img src="../multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo"></a>
+      <a href="carrito.html"><img src="../multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo"></a>
+    </div>
 
-    </header>
+  </header>
+
+  <!-- main -->
+
+  <main>
+
+    <h1>Mi cuenta</h1>
+
+    <section>
+
+      <!-- Acceso a cuenta -->
+      
+      <article class="options-acceder">
+        <h2 class="micuenta-h2">Acceder</h2>
+
+          <label for="email" class="complete-info">Email:</label>
+          <input type="email" name="email" class="info" required>
+
+          <label for="password" class="complete-info">Contraseña:</label>
+          <input type="password" name="password" class="info" required>
+
+          <div class="remember-container-flex">
+              <a href="" class="forgot-password">¿Has olvidado tu contraseña?</a>
+
+              <input type="checkbox" name="remember-me" class="remember-button">
+              <label for="remember-me" class="remember">Recuérdame</label>
+          </div>
+
+          <div class="acceder-container-flex">
+              <input type="button" value="Acceder" class="acceder">
+          </div>
+      </article>
+
+      <!-- Registro de cuenta -->
+
+      <article class="options-registrarse">
+        <h2 class="micuenta-h2">Registrarse</h2>
+
+          <label for="name" class="complete-info">Nombre:</label>
+          <input type="text" name="name" required>
+
+          <label for="last-name" class="complete-info">Apellido:</label>
+          <input type="text" name="last-name" required>
+
+          <label for="email" class="complete-info">Email:</label>
+          <input type="email" name="email" required>
+
+          <label for="password" class="complete-info">Contraseña:</label>
+          <input type="password" name="password" required>
+
+          <div class="terms-container-flex">
+            <input type="checkbox" name="terms" class="terms-checkout" required>
+            <label for="terms" class="terms"><a href="">Acepto terminos y condiciones</a></label>
+          </div>
+
+          <div class="registrarse">
+            <input type="button" value="Registrarse" class="registrarse-button">
+          </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- footer -->
+
+  <footer>
+
+    <section>
+    
+      <!-- envios -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pedidos por whatsapp -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pendiente contenido -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+    </section>
+    
+  </footer>
+    
+  <!-- img fixed con redireccionamiento a whatsapp -->
+    
+  <a href="https://www.whatsapp.com"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
 
 
     <!-- script bs -->
