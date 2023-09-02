@@ -29,47 +29,121 @@
 
 <body>
 
-    <header id="header">
+  <header id="header">
 
-        <!-- navbar bs -->
+    <!-- navbar bs -->
 
-        <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-link" href="../index.html">Inicio</a>
-                      <a class="nav-link" href="cuenta.html">Mi cuenta</a>
-                      <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
-                      <a class="nav-link" href="contacto.html">Contacto</a>
-                      <a class="nav-link" href="carrito.html">Carrito</a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+          <!-- boton -->
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- lista -->
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="../index.html">Inicio</a>
+              <a class="nav-link" href="cuenta.html">Mi cuenta</a>
+              <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
+              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link" href="carrito.html">Carrito</a>
+            </div>
+          </div>
         </div>
+      </nav>
+    </div>
 
-        <!-- logo -->
+    <!-- logo -->
 
-        <div>
-            <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
-        </div>
+      <div>
+        <a href="../index.html"><img src="../multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
+      </div>
 
-        <!-- demás imgs del header -->
+    <!-- demás imgs del header -->
 
-        <div>
-            <a href="cuenta.html"><img src="" alt="Mi-Cuenta-Acceso-Directo"></a>
-            <a href="carrito.html"><img src="" alt="Carrito-Acceso-Directo"></a>
-        </div>
+      <div>
+        <a href="cuenta.html"><img src="../multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo"></a>
+        <a href="carrito.html"><img src="../multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo"></a>
+      </div>
 
-    </header>
+  </header>
 
+  <!-- main -->
+
+  <main>
+
+    <h1>Productos</h1>
+
+    <!-- buscar -->
+
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+
+    <!-- dropdown -->
+
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Productos
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Perfumes</a></li>
+        <li><a class="dropdown-item" href="#">Maquillaje</a></li>
+        <li><a class="dropdown-item" href="#">Cuidado facil</a></li>
+      </ul>
+    </div>
+
+    <!-- perfumes -->
+
+    <!-- maquillaje -->
+
+    <!-- cuidado facial -->
+
+  </main>
     
-    
 
+  <!-- footer -->
+
+  <footer>
+
+    <section>
+    
+      <!-- envios -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pedidos por whatsapp -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+      <!-- pendiente contenido -->
+    
+      <article>
+        <p class="footer-title"></p>
+        <p class="footer-information"></p>
+      </article>
+    
+    </section>
+    
+  </footer>
+    
+  <!-- img fixed con redireccionamiento a whatsapp -->
+    
+  <a href="https://www.whatsapp.com"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
+    
     <!-- script bs -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
