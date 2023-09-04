@@ -1,0 +1,30 @@
+#footer {
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+
+    .footer-part-one,.footer-part-two{
+
+        padding: 0.5rem 0.5rem;
+        
+        .footer-title{
+            font-size: 1rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 0.5rem;
+        }
+
+        .footer-information{
+            font-size: 0.8rem;
+            font-family: 'Nunito', sans-serif;
+            padding: 0rem 1rem;
+        }
+    }
+
+    .footer-part-three{
+        display: none;
+    }
+
+}

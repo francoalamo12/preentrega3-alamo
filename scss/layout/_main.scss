@@ -1,0 +1,84 @@
+/* index */
+
+.index-h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0.5rem;
+    opacity: 0.5;
+    font-family: 'Nunito', sans-serif;
+}
+
+#carousel-main{
+    max-height: auto;
+
+    .carousel-inner {
+        width: 98%;
+        margin: auto;
+
+        img {
+            height: 30vh;
+        }
+    }
+}
+
+.index-main-h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.higlights-grid {
+    background-color: grey;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    padding: 0rem 1rem;
+    margin: 1.2rem 1.5rem;
+
+
+        .hl-first-article,.hl-second-article,.hl-third-article {
+            display: flex;
+            flex-direction: column;
+
+                .card-container {
+                background-color: aqua;
+                padding: 0.5rem 0rem;
+
+                    .card-img {
+                        max-height: auto;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    .card-body {
+                        background-color: red;
+                        text-align: center;
+
+                        .card-product {
+                            font-size: 1rem;
+                            font-family: 'Nunito', sans-serif;
+                        }
+
+                        .card-product-description {
+                            font-size: 0.8rem;
+                            opacity: 0.8;
+                            font-family: 'Nunito', sans-serif;
+                        }
+
+                        .buy {
+                            padding: 0.2rem 1rem;
+                            font-family: 'Nunito', sans-serif;
+                        }
+                    }
+            }
+    }
+
+    .hl-third-article {
+        display: none;
+    }
+    
+}

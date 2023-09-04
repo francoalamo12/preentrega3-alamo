@@ -1,8 +1,148 @@
-ul {
-  background-color: tomato;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-ul li {
-  color: blue;
+
+html body {
+  font-size: 62.5%;
+}
+
+#header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  height: auto;
+  background-color: pink;
+}
+#header .header-first-section {
+  justify-self: start;
+  align-self: center;
+}
+#header .header-first-section .navbar {
+  background-color: pink;
+  margin: 0 auto;
+}
+#header .header-second-section {
+  justify-self: center;
+  align-self: center;
+}
+#header .header-second-section .logo {
+  height: 1rem;
+}
+#header .header-third-section {
+  justify-self: end;
+  align-self: center;
+}
+#header .header-third-section .cuenta, #header .header-third-section .carrito {
+  padding-right: 0.5rem;
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+}
+
+/* index */
+.index-h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0.5rem;
+  opacity: 0.5;
+  font-family: "Nunito", sans-serif;
+}
+
+#carousel-main {
+  max-height: auto;
+}
+#carousel-main .carousel-inner {
+  width: 98%;
+  margin: auto;
+}
+#carousel-main .carousel-inner img {
+  height: 30vh;
+}
+
+.index-main-h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.higlights-grid {
+  background-color: grey;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin: 1.2rem 1.5rem;
+}
+.higlights-grid .hl-first-article, .higlights-grid .hl-second-article, .higlights-grid .hl-third-article {
+  display: flex;
+  flex-direction: column;
+}
+.higlights-grid .hl-first-article .card-container, .higlights-grid .hl-second-article .card-container, .higlights-grid .hl-third-article .card-container {
+  background-color: aqua;
+  padding: 0.5rem 0rem;
+}
+.higlights-grid .hl-first-article .card-container .card-img, .higlights-grid .hl-second-article .card-container .card-img, .higlights-grid .hl-third-article .card-container .card-img {
+  max-height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.higlights-grid .hl-first-article .card-container .card-body, .higlights-grid .hl-second-article .card-container .card-body, .higlights-grid .hl-third-article .card-container .card-body {
+  background-color: red;
+  text-align: center;
+}
+.higlights-grid .hl-first-article .card-container .card-body .card-product, .higlights-grid .hl-second-article .card-container .card-body .card-product, .higlights-grid .hl-third-article .card-container .card-body .card-product {
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.higlights-grid .hl-first-article .card-container .card-body .card-product-description, .higlights-grid .hl-second-article .card-container .card-body .card-product-description, .higlights-grid .hl-third-article .card-container .card-body .card-product-description {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-family: "Nunito", sans-serif;
+}
+.higlights-grid .hl-first-article .card-container .card-body .buy, .higlights-grid .hl-second-article .card-container .card-body .buy, .higlights-grid .hl-third-article .card-container .card-body .buy {
+  padding: 0.2rem 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.higlights-grid .hl-third-article {
+  display: none;
+}
+
+#footer {
+  background-color: pink;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+#footer .footer-part-one, #footer .footer-part-two {
+  padding: 0.5rem 0.5rem;
+}
+#footer .footer-part-one .footer-title, #footer .footer-part-two .footer-title {
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+#footer .footer-part-one .footer-information, #footer .footer-part-two .footer-information {
+  font-size: 0.8rem;
+  font-family: "Nunito", sans-serif;
+  padding: 0rem 1rem;
+}
+#footer .footer-part-three {
+  display: none;
+}
+
+.wsp-fixed {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.wsp-fixed .wsp-img {
+  height: 3rem;
+  width: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+#header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    height: auto;
+
+    background-color: pink;
+
+    .header-first-section {
+        justify-self: start;
+        align-self: center;
+
+        .navbar {
+            background-color: pink;
+            margin: 0 auto;
+        }
+    }
+
+    .header-second-section {
+        justify-self: center;
+        align-self: center;
+
+        .logo {
+            height: 1rem;
+        }
+    }
+
+    .header-third-section {
+        justify-self: end;
+        align-self: center;
+
+        .cuenta, .carrito {
+            padding-right: 0.5rem;
+            margin-top: 0 auto;
+            margin-bottom: 0 auto;
+        }
+    }
+}

@@ -11,7 +11,7 @@
 
     <!-- css -->
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- css bs -->
 
@@ -20,6 +20,13 @@
     <!-- favicon -->
 
     <link rel="shortcut icon" href="multimedia/moon-favicon.jpeg" type="image/x-icon">
+
+    <!-- Fuentes -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap" rel="stylesheet">
+
 
     <!-- title -->
 
@@ -36,7 +43,7 @@
     <!-- navbar bs -->
 
     <div class="header-first-section">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,14 +64,14 @@
         <!-- logo -->
 
         <div class="header-second-section">
-            <a href="index.html"><img src="multimedia/moon-logo-black.png" alt="Moon-Makeup-Logo"></a>
+            <a href="index.html"><img src="multimedia/moon-logo-black-b.png" alt="Moon-Makeup-Logo" class="logo"></a>
         </div>
 
         <!-- demás imgs del header -->
 
         <div class="header-third-section">
-            <a href="pages/cuenta.html"><img src="multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo"></a>
-            <a href="pages/carrito.html"><img src="multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo"></a>
+            <a href="pages/cuenta.html"><img src="multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo" class="cuenta"></a>
+            <a href="pages/carrito.html"><img src="multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo" class="carrito"></a>
         </div>
 
     </header>
@@ -73,7 +80,7 @@
 
     <main>
 
-      <h1>Moon Makeup</h1>
+      <h1 class="index-h1">Moon Makeup</h1>
 
       <!-- carousel bs -->
 
@@ -115,64 +122,64 @@
 
       <!-- Destacados -->
 
-      <h2>Destacados</h2>
+      <h2 class="index-main-h2">Destacados</h2>
 
-      <section class="higlights-grid">
+      <article class="higlights-grid">
 
         <!-- primer columna -->
 
-        <article class="hl-first-article">
+        <section class="hl-first-article">
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-uno.avif" alt="" class="card-img"></a>
               <div class="card-body">
-                <p class="card-product">Producto</p>
-                  <p class="card-product-description">Breve descripción</p>
+                <p class="card-product">Producto con nombre no tan breve</p>
+                  <p class="card-product-description">Breve descripción no tan breve en realidad</p>
                     <button class="buy" value="buy" class="btn-buy">Comprar</button>
               </div>
           </div>
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-dos.avif" alt="" class="card-img"></a>
               <div class="card-body">
-                <p class="card-product">Producto</p>
-                  <p class="card-product-description">Breve descripción</p>
+                <p class="card-product">Producto con nombre no tan breve</p>
+                  <p class="card-product-description">Breve descripción no tan breve en realidad</p>
                     <button class="buy" value="buy" class="btn-buy">Comprar</button>
               </div>
           </div>
 
-        </article>
+        </section>
 
         <!-- segunda columna -->
 
-        <article class="hl-second-article">
+        <section class="hl-second-article">
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-uno.avif" alt="" class="card-img"></a>
               <div class="card-body">
-                <p class="card-product">Producto</p>
-                  <p class="card-product-description">Breve descripción</p>
+                <p class="card-product">Producto con nombre no tan breve</p>
+                  <p class="card-product-description">Breve descripción no tan breve en realidad</p>
                     <button class="buy" value="buy" class="btn-buy">Comprar</button>
               </div>
           </div>
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-dos.avif" alt="" class="card-img"></a>
               <div class="card-body">
-                <p class="card-product">Producto</p>
-                  <p class="card-product-description">Breve descripción</p>
+                <p class="card-product">Producto con nombre no tan breve</p>
+                  <p class="card-product-description">Breve descripción no tan breve en realidad</p>
                     <button class="buy" value="buy" class="btn-buy">Comprar</button>
               </div>
           </div>
 
-        </article>
+        </section>
 
         <!-- tercera columna -->
 
-        <article class="hl-third-article">
+        <section class="hl-third-article">
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-uno.avif" alt="" class="card-img"></a>
               <div class="card-body">
                 <p class="card-product">Producto</p>
                   <p class="card-product-description">Breve descripción</p>
@@ -181,54 +188,50 @@
           </div>
 
           <div class="card-container">
-            <a href="pages/productos.html"><img src="" alt="" class="card-img"></a>
+            <a href="pages/productos.html"><img src="multimedia/img-hl-dos.avif" alt="" class="card-img"></a>
               <div class="card-body">
-                <p class="card-product">Producto</p>
-                  <p class="card-product-description">Breve descripción</p>
+                <p class="card-product">Producto con nombre mas largo</p>
+                  <p class="card-product-description">Breve descripción del producto, no tan breve en realidad</p>
                     <button class="buy" value="buy" class="btn-buy">Comprar</button>
               </div>
           </div>
 
-        </article>
+        </section>
 
-      </section>
+      </article>
 
     </main>
 
     <!-- footer -->
 
-    <footer>
-
-      <section>
+    <footer id="footer">
 
         <!-- envios -->
 
-        <article>
-          <p class="footer-title"></p>
-          <p class="footer-information"></p>
+        <article class="footer-part-one">
+          <p class="footer-title">Envíos gratis:</p>
+          <p class="footer-information">Con compras superiores a AR$ 40.000 para CABA y superiores a AR$ 60.000 para GBA.</p>
         </article>
 
         <!-- pedidos por whatsapp -->
 
-        <article>
-          <p class="footer-title"></p>
-          <p class="footer-information"></p>
+        <article class="footer-part-two">
+          <p class="footer-title">Pedidos por whatsapp:</p>
+          <p class="footer-information">¡De Lunes a Sábados de 10:00 a 20:00 hs al número +54 9 11 0000-0000!</p>
         </article>
 
         <!-- pendiente contenido -->
 
-        <article>
-          <p class="footer-title"></p>
-          <p class="footer-information"></p>
+        <article class="footer-part-three">
+          <p class="footer-title">titulo</p>
+          <span class="footer-information">contenido</span>
         </article>
-
-      </section>
 
     </footer>
 
     <!-- img fixed con redireccionamiento a whatsapp -->
 
-    <a href="https://www.whatsapp.com"><img src="multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
+    <a href="https://www.whatsapp.com" class="wsp-fixed"><img src="multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp" class="wsp-img"></a>
 
     <!-- script bs -->
 
