@@ -1,7 +1,10 @@
 #footer {
     background-color: pink;
+/*     margin-top: auto; */
+/*     height: auto; */
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex: 1;
 
     .footer-part-one,.footer-part-two{
@@ -13,7 +16,6 @@
             font-family: 'Nunito', sans-serif;
             font-weight: 400;
             text-align: center;
-            padding-top: 0.5rem;
         }
 
         .footer-information{
