@@ -1,6 +1,6 @@
 /* index */
 
-.index-h1 {
+.main-h1 {
     font-size: 1.5rem;
     margin: 1rem 0.5rem;
     opacity: 0.5;
@@ -82,3 +82,170 @@
     }
     
 }
+
+/* contacto */
+
+.contacto-h2 {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+        .contact-form, .contact-others {
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0rem 1rem;
+        font-family: 'Nunito', sans-serif;
+
+            input, textarea {
+                width: 100%;
+            }
+
+            a {
+                font-size: 0.8rem;
+                text-decoration: none;
+                color: #141313;
+            }
+
+            img {
+                height: 2rem;
+                width: 2rem;
+            }
+    }
+}
+
+/* cuenta */
+
+main .micuenta-h2 {
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+main .options {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    gap: 1rem;
+    padding: 0.5em 1em;
+
+        .options-acceder {
+            display: flex;
+            flex-direction: column;
+            margin: 0rem 1.5rem;
+            font-family: 'Nunito', sans-serif;
+
+                .remember-container-flex {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0.5rem 0rem;
+
+                    .forgot-password {
+                        margin: 0rem 0.5rem;
+                    }
+
+                    .remember-button {
+                        margin: 0rem 0.1rem;
+                    }
+        }
+
+        .acceder-container-flex {
+            display: flex;
+            justify-content: flex-end;
+
+                .acceder {
+                    padding: 0.2rem 1rem;
+                }
+        }
+        
+    }
+
+        .options-registrarse {
+            display: flex;
+            flex-direction: column;
+            margin: 0rem 1.5rem;
+            font-family: 'Nunito', sans-serif;
+
+                .terms-container-flex {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0.5rem 0rem;
+
+                        .terms-checkout {
+                            margin: 0rem 0.1rem;
+                        }
+                }
+
+                .registrarse {
+                    display: flex;
+                    justify-content: flex-end;
+
+                        .registrarse-button {
+                            padding: 0.2rem 1rem;
+                        }
+                }
+        }
+}
+
+/* main .options .options-acceder,
+main .options .options-registrarse {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+main .options .options-acceder .remember-container-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0.5rem 0rem;
+}
+
+main .options .options-acceder .remember-container-flex .forgot-password {
+    margin: 0rem 0.5rem;
+}
+
+main .options .options-acceder .remember-container-flex .remember-button {
+    margin: 0rem 0.1rem;
+}
+
+main .options .options-acceder .acceder-container-flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .options .options-acceder .acceder-container-flex .acceder {
+    padding: 0.2rem 1rem;
+}
+
+main .options .options-registrarse .terms-container-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0.5rem 0rem;
+}
+
+main .options .options-registrarse .terms-container-flex .terms-checkout {
+    margin: 0rem 0.1rem;
+}
+
+main .options .options-registrarse .registrarse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .options .options-registrarse .registrarse .registrarse-button {
+    padding: 0.2rem 1rem;
+} */
