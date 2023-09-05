@@ -260,6 +260,64 @@ main .options .options-registrarse .registrarse .registrarse-button {
   margin: 0.2rem 0.3rem 0.2rem 0;
 }
 
+/* productos */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.search-container .d-flex {
+  padding: 0;
+}
+.search-container .dropdown {
+  padding-left: 1rem;
+}
+
+.product-title {
+  font-size: 1.4rem;
+  font-family: "Nunito", sans-serif;
+  margin: 0.8rem;
+}
+
+.product-subtitle {
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  margin: 1rem 1.2rem;
+  opacity: 0.8rem;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*     justify-content: center;
+      align-items: center; */
+  background-color: black;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  row-gap: 1rem;
+}
+.product-container .product-subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+.product-container .product-subcontainer .product-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.2rem 0;
+  width: 10rem;
+  background-color: red;
+}
+.product-container .product-subcontainer .product-inner .product-img {
+  max-width: 100%;
+  height: 8rem;
+}
+
 #footer {
   background-color: pink;
   /*     margin-top: auto; */
