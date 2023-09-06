@@ -1,4 +1,6 @@
-/* cuenta */
+        /* cuenta */
+
+/* mobile */
 
 main .micuenta-h2 {
     font-size: 1.2rem;
@@ -71,4 +73,55 @@ main .options {
                         }
                 }
         }
+}
+
+/* desktop */
+
+@media (min-width:1023px){
+
+    main {
+
+        .main-h1 {
+            font-size: 1.8rem;
+        }
+        .options {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            margin: auto;
+            border: 1px solid black;
+
+
+            .options-acceder{
+                display: flex;
+                border: 1px solid black;
+                width: 75%;
+                flex: 1;
+
+                .micuenta-h2 {
+                    font-size: 1.5rem;
+                }
+
+                .complete-info {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .options-registrarse{
+                display: flex;
+                justify-content: start;
+                border: 1px solid black;
+                width: 75%;
+                flex:1;
+
+                .micuenta-h2 {
+                    font-size: 1.5rem;
+                }
+
+                .complete-info {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }

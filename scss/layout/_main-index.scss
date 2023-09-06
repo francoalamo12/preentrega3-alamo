@@ -1,4 +1,6 @@
-/* index */
+        /* index */
+
+/* mobile */
 
 .main-h1 {
     font-size: 1.5rem;
@@ -8,15 +10,27 @@
 }
 
 #carousel-main{
-    max-height: auto;
+
+    .carousel-indicators {
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+    }
 
     .carousel-inner {
-        width: 98%;
+        height: auto;
+        width: min(95%, 1100px);
         margin: auto;
+        border: 1px solid black;
 
         img {
             height: 30vh;
         }
+    }
+
+    .carousel-btn {
+        padding: 0 auto;
+        border: 1px solid black;
     }
 }
 
@@ -32,9 +46,10 @@
     background-color: grey;
 
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(350px, 100%), 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    gap: 5px;
 
     padding: 0rem 1rem;
     margin: 1.2rem 1.5rem;
@@ -43,19 +58,19 @@
         .hl-first-article,.hl-second-article,.hl-third-article {
             display: flex;
             flex-direction: column;
+            gap: 5px;
 
                 .card-container {
-                background-color: aqua;
-                padding: 0.5rem 0rem;
+                background-color: black;
 
                     .card-img {
-                        height: auto;
+                        max-height: auto;
                         width: 100%;
                         margin: 0 auto;
                     }
 
                     .card-body {
-                        background-color: red;
+                        background-color: black;
                         text-align: center;
 
                         .card-product {
@@ -77,8 +92,58 @@
             }
     }
 
-/*     .hl-third-article {
+    .hl-third-article {
         display: none;
-    } */
+    }
     
+}
+
+/* desktop */
+
+@media (min-width:1023px){
+    .main-h1 {
+        font-size: 1.8rem;
+    }
+
+    #carousel-main {
+        height: auto;
+        width: 90%;
+        margin: auto;
+         
+            img {
+                height: auto;
+            }
+
+        .carousel-control-prev-icon,.carousel-control-next-icon{
+            filter: invert(100%);
+            }
+        
+    }
+
+    .index-main-h2 {
+        font-size: 1.5rem;
+    }
+
+    .higlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 65%;
+        gap: 5px;
+        margin-inline: auto;
+        
+            .hl-third-article {
+                display: inline-block;
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+            }
+
+            .hl-first-article,.hl-second-article,.hl-third-article{
+
+                .card-container {
+                }
+                .card-img {
+                    height: 15rem;
+                }
+            }
+    }
 }

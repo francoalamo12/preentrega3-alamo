@@ -44,6 +44,7 @@ html body {
 }
 
 /* index */
+/* mobile */
 .main-h1 {
   font-size: 1.5rem;
   margin: 1rem 0.5rem;
@@ -51,15 +52,23 @@ html body {
   font-family: "Nunito", sans-serif;
 }
 
-#carousel-main {
-  max-height: auto;
+#carousel-main .carousel-indicators {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
 }
 #carousel-main .carousel-inner {
-  width: 98%;
+  height: auto;
+  width: min(95%, 1100px);
   margin: auto;
+  border: 1px solid black;
 }
 #carousel-main .carousel-inner img {
   height: 30vh;
+}
+#carousel-main .carousel-btn {
+  padding: 0 auto;
+  border: 1px solid black;
 }
 
 .index-main-h2 {
@@ -76,16 +85,17 @@ html body {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  gap: 5px;
   padding: 0rem 1rem;
   margin: 1.2rem 1.5rem;
 }
 .higlights-grid .hl-first-article, .higlights-grid .hl-second-article, .higlights-grid .hl-third-article {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 .higlights-grid .hl-first-article .card-container, .higlights-grid .hl-second-article .card-container, .higlights-grid .hl-third-article .card-container {
-  background-color: aqua;
-  padding: 0.5rem 0rem;
+  background-color: black;
 }
 .higlights-grid .hl-first-article .card-container .card-img, .higlights-grid .hl-second-article .card-container .card-img, .higlights-grid .hl-third-article .card-container .card-img {
   max-height: auto;
@@ -93,7 +103,7 @@ html body {
   margin: 0 auto;
 }
 .higlights-grid .hl-first-article .card-container .card-body, .higlights-grid .hl-second-article .card-container .card-body, .higlights-grid .hl-third-article .card-container .card-body {
-  background-color: red;
+  background-color: black;
   text-align: center;
 }
 .higlights-grid .hl-first-article .card-container .card-body .card-product, .higlights-grid .hl-second-article .card-container .card-body .card-product, .higlights-grid .hl-third-article .card-container .card-body .card-product {
@@ -113,41 +123,43 @@ html body {
   display: none;
 }
 
-/* contacto */
-.contacto-h2 {
-  font-size: 1.2rem;
-  text-align: justify;
-  font-family: "Nunito", sans-serif;
+/* desktop */
+@media (min-width: 1023px) {
+  .main-h1 {
+    font-size: 1.8rem;
+  }
+  #carousel-main {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+  #carousel-main img {
+    height: auto;
+  }
+  #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  .index-main-h2 {
+    font-size: 1.5rem;
+  }
+  .higlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 65%;
+    gap: 5px;
+    margin-inline: auto;
+  }
+  .higlights-grid .hl-third-article {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0rem;
+  }
+  .higlights-grid .hl-first-article .card-img, .higlights-grid .hl-second-article .card-img, .higlights-grid .hl-third-article .card-img {
+    height: 15rem;
+  }
 }
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-}
-.contact .contact-form, .contact .contact-others {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0rem 1rem;
-  font-family: "Nunito", sans-serif;
-}
-.contact .contact-form input, .contact .contact-form textarea, .contact .contact-others input, .contact .contact-others textarea {
-  width: 100%;
-}
-.contact .contact-form a, .contact .contact-others a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #141313;
-}
-.contact .contact-form img, .contact .contact-others img {
-  height: 2rem;
-  width: 2rem;
-}
-
 /* cuenta */
+/* mobile */
 main .micuenta-h2 {
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
@@ -208,58 +220,44 @@ main .options .options-registrarse .registrarse .registrarse-button {
   padding: 0.2rem 1rem;
 }
 
-/* carrito */
-.card-carrito {
-  display: flex;
-  border: 1px solid black;
-  margin: 1rem 0.5rem;
+/* desktop */
+@media (min-width: 1023px) {
+  main .main-h1 {
+    font-size: 1.8rem;
+  }
+  main .options {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    margin: auto;
+    border: 1px solid black;
+  }
+  main .options .options-acceder {
+    display: flex;
+    border: 1px solid black;
+    width: 75%;
+    flex: 1;
+  }
+  main .options .options-acceder .micuenta-h2 {
+    font-size: 1.5rem;
+  }
+  main .options .options-acceder .complete-info {
+    font-size: 0.8rem;
+  }
+  main .options .options-registrarse {
+    display: flex;
+    justify-content: start;
+    border: 1px solid black;
+    width: 75%;
+    flex: 1;
+  }
+  main .options .options-registrarse .micuenta-h2 {
+    font-size: 1.5rem;
+  }
+  main .options .options-registrarse .complete-info {
+    font-size: 0.8rem;
+  }
 }
-.card-carrito .img-card {
-  flex: 1;
-  border: 1px solid black;
-  margin: 0.2rem 0.1rem;
-  height: 10rem;
-  width: auto;
-}
-.card-carrito .text-card {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  margin: 0.2rem 0.1rem;
-}
-.card-carrito .text-card .btn-close {
-  align-self: end;
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-}
-.card-carrito .text-card .card-carrito-title {
-  align-self: start;
-  margin: 0.2rem 0.3rem;
-  font-size: 1.1rem;
-}
-.card-carrito .text-card .card-carrito-subtitle {
-  align-self: start;
-  margin: 0 0.2rem 0 0.2rem;
-  font-size: 0.8rem;
-}
-
-.carrito-options {
-  border: 1px solid black;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin: 0rem 0.5rem 1rem 0.5rem;
-}
-.carrito-options .cancel {
-  padding: 0.3rem 0.8rem;
-  margin: 0.2rem 0.3rem 0.2rem 0;
-}
-.carrito-options .buy {
-  padding: 0.3rem 0.8rem;
-  margin: 0.2rem 0.3rem 0.2rem 0;
-}
-
 /* productos */
 .search-container {
   display: flex;
@@ -318,25 +316,138 @@ main .options .options-registrarse .registrarse .registrarse-button {
   height: 8rem;
 }
 
+/* contacto */
+/* mobile */
+.contact-h2 {
+  font-size: 1.2rem;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+.contact .contact-form, .contact .contact-others {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0rem 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.contact .contact-form input, .contact .contact-form textarea, .contact .contact-others input, .contact .contact-others textarea {
+  width: 100%;
+}
+.contact .contact-form a, .contact .contact-others a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #141313;
+}
+.contact .contact-form img, .contact .contact-others img {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* desktop */
+@media (min-width: 1023px) {
+  main .main-h1 {
+    font-size: 1.8rem;
+  }
+  main .contact {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: auto;
+  }
+  main .contact .contact-form {
+    flex: 1;
+  }
+  main .contact .contact-form .contact-h2 {
+    font-size: 1.5rem;
+  }
+  main .contact .contact-others {
+    flex: 1;
+  }
+  main .contact .contact-others .contact-container {
+    margin-bottom: 1rem;
+  }
+  main .contact .contact-others .contact-container .contact-h2 {
+    font-size: 1.5rem;
+  }
+}
+/* carrito */
+.card-carrito {
+  display: flex;
+  border: 1px solid black;
+  margin: 1rem 0.5rem;
+}
+.card-carrito .img-card {
+  flex: 1;
+  border: 1px solid black;
+  margin: 0.2rem 0.1rem;
+  height: 10rem;
+  width: auto;
+}
+.card-carrito .text-card {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 0.2rem 0.1rem;
+}
+.card-carrito .text-card .btn-close {
+  align-self: end;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.card-carrito .text-card .card-carrito-title {
+  align-self: start;
+  margin: 0.2rem 0.3rem;
+  font-size: 1.1rem;
+}
+.card-carrito .text-card .card-carrito-subtitle {
+  align-self: start;
+  margin: 0 0.2rem 0 0.2rem;
+  font-size: 0.8rem;
+}
+
+.carrito-options {
+  border: 1px solid black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0rem 0.5rem 1rem 0.5rem;
+}
+.carrito-options .cancel {
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+}
+.carrito-options .buy {
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+}
+
 #footer {
   background-color: pink;
-  /*     margin-top: auto; */
-  /*     height: auto; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex: 1;
 }
-#footer .footer-part-one, #footer .footer-part-two {
+#footer .footer-part-one, #footer .footer-part-two, #footer .footer-part-three {
   padding: 0.5rem 0.5rem;
 }
-#footer .footer-part-one .footer-title, #footer .footer-part-two .footer-title {
+#footer .footer-part-one .footer-title, #footer .footer-part-two .footer-title, #footer .footer-part-three .footer-title {
   font-size: 1rem;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   text-align: center;
 }
-#footer .footer-part-one .footer-information, #footer .footer-part-two .footer-information {
+#footer .footer-part-one .footer-information, #footer .footer-part-two .footer-information, #footer .footer-part-three .footer-information {
   font-size: 0.8rem;
   font-family: "Nunito", sans-serif;
   padding: 0rem 1rem;
