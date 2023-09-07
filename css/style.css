@@ -39,12 +39,24 @@ html body {
 }
 #header .header-third-section .cuenta, #header .header-third-section .carrito {
   padding-right: 0.5rem;
-  margin-top: 0 auto;
-  margin-bottom: 0 auto;
 }
 
+@media (min-width: 1024px) {
+  #header {
+    height: 10vh;
+  }
+  #header .header-first-section .navbar .container-fluid .collapse .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  #header .header-second-section .logo {
+    height: 7vh;
+  }
+  #header .header-third-section .cuenta, #header .header-third-section .carrito {
+    height: 2.2rem;
+  }
+}
 /* index */
-/* mobile */
 .main-h1 {
   font-size: 1.5rem;
   margin: 1rem 0.5rem;
@@ -123,43 +135,7 @@ html body {
   display: none;
 }
 
-/* desktop */
-@media (min-width: 1023px) {
-  .main-h1 {
-    font-size: 1.8rem;
-  }
-  #carousel-main {
-    height: auto;
-    width: 90%;
-    margin: auto;
-  }
-  #carousel-main img {
-    height: auto;
-  }
-  #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
-    filter: invert(100%);
-  }
-  .index-main-h2 {
-    font-size: 1.5rem;
-  }
-  .higlights-grid {
-    grid-template-columns: repeat(3, 1fr);
-    width: 65%;
-    gap: 5px;
-    margin-inline: auto;
-  }
-  .higlights-grid .hl-third-article {
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 0rem;
-  }
-  .higlights-grid .hl-first-article .card-img, .higlights-grid .hl-second-article .card-img, .higlights-grid .hl-third-article .card-img {
-    height: 15rem;
-  }
-}
 /* cuenta */
-/* mobile */
 main .micuenta-h2 {
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
@@ -220,44 +196,6 @@ main .options .options-registrarse .registrarse .registrarse-button {
   padding: 0.2rem 1rem;
 }
 
-/* desktop */
-@media (min-width: 1023px) {
-  main .main-h1 {
-    font-size: 1.8rem;
-  }
-  main .options {
-    display: flex;
-    width: 85%;
-    justify-content: space-around;
-    margin: auto;
-    border: 1px solid black;
-  }
-  main .options .options-acceder {
-    display: flex;
-    border: 1px solid black;
-    width: 75%;
-    flex: 1;
-  }
-  main .options .options-acceder .micuenta-h2 {
-    font-size: 1.5rem;
-  }
-  main .options .options-acceder .complete-info {
-    font-size: 0.8rem;
-  }
-  main .options .options-registrarse {
-    display: flex;
-    justify-content: start;
-    border: 1px solid black;
-    width: 75%;
-    flex: 1;
-  }
-  main .options .options-registrarse .micuenta-h2 {
-    font-size: 1.5rem;
-  }
-  main .options .options-registrarse .complete-info {
-    font-size: 0.8rem;
-  }
-}
 /* productos */
 .search-container {
   display: flex;
@@ -274,6 +212,7 @@ main .options .options-registrarse .registrarse .registrarse-button {
 .product-title {
   font-size: 1.4rem;
   font-family: "Nunito", sans-serif;
+  font-weight: 600;
   margin: 0.8rem;
 }
 
@@ -281,14 +220,12 @@ main .options .options-registrarse .registrarse .registrarse-button {
   font-size: 1.1rem;
   font-family: "Nunito", sans-serif;
   margin: 1rem 1.2rem;
-  opacity: 0.8rem;
+  opacity: 0.4rem;
 }
 
 .product-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /*     justify-content: center;
-      align-items: center; */
   background-color: black;
   margin-bottom: 1rem;
   gap: 1rem;
@@ -317,7 +254,6 @@ main .options .options-registrarse .registrarse .registrarse-button {
 }
 
 /* contacto */
-/* mobile */
 .contact-h2 {
   font-size: 1.2rem;
   text-align: justify;
@@ -351,34 +287,6 @@ main .options .options-registrarse .registrarse .registrarse-button {
   width: 2rem;
 }
 
-/* desktop */
-@media (min-width: 1023px) {
-  main .main-h1 {
-    font-size: 1.8rem;
-  }
-  main .contact {
-    display: flex;
-    width: 85%;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin: auto;
-  }
-  main .contact .contact-form {
-    flex: 1;
-  }
-  main .contact .contact-form .contact-h2 {
-    font-size: 1.5rem;
-  }
-  main .contact .contact-others {
-    flex: 1;
-  }
-  main .contact .contact-others .contact-container {
-    margin-bottom: 1rem;
-  }
-  main .contact .contact-others .contact-container .contact-h2 {
-    font-size: 1.5rem;
-  }
-}
 /* carrito */
 .card-carrito {
   display: flex;
@@ -429,6 +337,167 @@ main .options .options-registrarse .registrarse .registrarse-button {
 .carrito-options .buy {
   padding: 0.3rem 0.8rem;
   margin: 0.2rem 0.3rem 0.2rem 0;
+}
+
+/* index */
+@media (min-width: 1024px) {
+  .main-h1 {
+    font-size: 1.8rem;
+  }
+  #carousel-main {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+  #carousel-main img {
+    height: auto;
+  }
+  #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  .index-main-h2 {
+    font-size: 1.5rem;
+  }
+  .higlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 65%;
+    gap: 5px;
+    margin-inline: auto;
+    /*             .hl-first-article,.hl-second-article,.hl-third-article{
+
+                    .card-container {
+                    }
+                    .card-img {
+                        height: 15rem;
+                    }
+                } */
+  }
+  .higlights-grid .hl-third-article {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0rem;
+  }
+}
+/* cuenta */
+@media (min-width: 1024px) {
+  main .main-h1 {
+    font-size: 1.8rem;
+  }
+  main .options {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    margin: 5rem auto;
+    border: 1px solid black;
+  }
+  main .options .options-acceder {
+    display: flex;
+    border: 1px solid black;
+    width: 75%;
+    flex: 1;
+  }
+  main .options .options-acceder .micuenta-h2 {
+    font-size: 1.5rem;
+  }
+  main .options .options-acceder .complete-info {
+    font-size: 0.8rem;
+  }
+  main .options .options-registrarse {
+    display: flex;
+    justify-content: start;
+    border: 1px solid black;
+    width: 75%;
+    flex: 1;
+  }
+  main .options .options-registrarse .micuenta-h2 {
+    font-size: 1.5rem;
+  }
+  main .options .options-registrarse .complete-info {
+    font-size: 0.8rem;
+  }
+}
+/* contacto */
+@media (min-width: 1024px) {
+  main .main-h1 {
+    font-size: 1.8rem;
+  }
+  main .contact {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 5rem auto;
+  }
+  main .contact .contact-form {
+    flex: 1;
+  }
+  main .contact .contact-form .contact-h2 {
+    font-size: 1.5rem;
+  }
+  main .contact .contact-others {
+    flex: 1;
+  }
+  main .contact .contact-others .contact-container {
+    margin-bottom: 1rem;
+  }
+  main .contact .contact-others .contact-container .contact-h2 {
+    font-size: 1.5rem;
+  }
+}
+/* productos */
+@media (min-width: 1024px) {
+  .productos-main {
+    display: flex;
+    width: 90%;
+  }
+  .productos-main .search-container {
+    display: inline-block;
+    flex: 1;
+    border: 1px solid black;
+  }
+  .productos-main .search-container .form-look-for {
+    border: 1px solid blue;
+  }
+  .productos-main .search-container .form-look-for .look-for {
+    border: 1px solid aqua;
+  }
+  .productos-main .search-container .form-look-for .look-for-btn {
+    border: 1px solid pink;
+  }
+  .productos-main .search-container .dropdown {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid black;
+  }
+  .productos-main .product-main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+  .productos-main .product-main-container .product-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  .productos-main .product-main-container .product-subtitle {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+  .productos-main .product-main-container .product-container .product-subcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+  }
+}
+/* carrito */
+.card-carrito {
+  width: 50%;
+  margin: auto;
+}
+
+.carrito-options {
+  width: 55%;
+  margin: 1rem auto;
 }
 
 #footer {

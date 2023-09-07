@@ -1,0 +1,213 @@
+/* index */
+
+@media (min-width:1024px){
+    .main-h1 {
+        font-size: 1.8rem;
+    }
+
+    #carousel-main {
+        height: auto;
+        width: 90%;
+        margin: auto;
+         
+            img {
+                height: auto;
+            }
+
+        .carousel-control-prev-icon,.carousel-control-next-icon{
+            filter: invert(100%);
+            }
+        
+    }
+
+    .index-main-h2 {
+        font-size: 1.5rem;
+    }
+
+    .higlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 65%;
+        gap: 5px;
+        margin-inline: auto;
+        
+            .hl-third-article {
+                display: block;
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+            }
+
+/*             .hl-first-article,.hl-second-article,.hl-third-article{
+
+                .card-container {
+                }
+                .card-img {
+                    height: 15rem;
+                }
+            } */
+    }
+}
+
+/* cuenta */
+
+@media (min-width:1024px){
+
+    main {
+
+        .main-h1 {
+            font-size: 1.8rem;
+        }
+        .options {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            margin: 5rem auto;
+            border: 1px solid black;
+
+
+            .options-acceder{
+                display: flex;
+                border: 1px solid black;
+                width: 75%;
+                flex: 1;
+
+                .micuenta-h2 {
+                    font-size: 1.5rem;
+                }
+
+                .complete-info {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .options-registrarse{
+                display: flex;
+                justify-content: start;
+                border: 1px solid black;
+                width: 75%;
+                flex:1;
+
+                .micuenta-h2 {
+                    font-size: 1.5rem;
+                }
+
+                .complete-info {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+/* contacto */
+
+@media (min-width:1024px){
+
+    main {
+
+        .main-h1 {
+            font-size: 1.8rem;
+        }
+
+        .contact {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 5rem auto;
+            
+            .contact-form{
+                flex: 1;
+
+                .contact-h2{
+                    font-size: 1.5rem;
+
+                }
+            }
+
+            .contact-others{
+                flex: 1;
+
+                .contact-container {
+                    margin-bottom: 1rem;
+                    
+                    .contact-h2{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+/* productos */
+
+@media (min-width:1024px){
+    .productos-main {
+        display: flex;
+        width: 90%;
+
+        .search-container {
+            display: inline-block;
+            flex: 1;
+            border: 1px solid black;
+
+            .form-look-for {
+                border: 1px solid blue;
+
+                .look-for {
+                    border: 1px solid aqua;
+                }
+
+                .look-for-btn {
+                    border: 1px solid pink;
+                }
+            }
+
+            .dropdown {
+                display: flex;
+                justify-content: flex-end;
+                border: 1px solid black;
+            }
+        }
+
+        .product-main-container {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+
+            .product-title{
+                margin-top: 0;
+                font-size: 1.5rem;
+            }
+
+            .product-subtitle{
+                margin-top: 0;
+                font-size: 1.2rem;
+            }
+
+            .product-container{
+                
+                .product-subcontainer{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    align-content: center;
+                }
+            }
+        }
+    }
+}
+
+/* carrito */
+
+.card-carrito{
+    width: 50%;
+    margin: auto;
+}
+
+.carrito-options{
+    width: 55%;
+    margin: 1rem auto;
+}

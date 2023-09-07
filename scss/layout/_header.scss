@@ -32,8 +32,40 @@
 
         .cuenta, .carrito {
             padding-right: 0.5rem;
-            margin-top: 0 auto;
-            margin-bottom: 0 auto;
         }
+    }
+}
+
+@media (min-width:1024px){
+    #header {
+        height: 10vh;
+
+        .header-first-section{
+            .navbar{
+                .container-fluid{
+                    .collapse{
+                        .navbar-nav{
+                            .nav-link{
+                                font-size: 0.8rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-second-section{
+            .logo{
+                height: 7vh;
+            }
+        }
+
+        .header-third-section{
+            .cuenta, .carrito{
+                height: 2.2rem;
+            }
+            }
+        
     }
 }
