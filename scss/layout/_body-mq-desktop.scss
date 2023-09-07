@@ -29,12 +29,16 @@
         width: 65%;
         gap: 5px;
         margin-inline: auto;
+
+            .hl-first-article,.hl-second-article{
+                padding: 0.2rem 0;
+            }
         
             .hl-third-article {
                 display: block;
                 display: flex;
                 flex-direction: column;
-                padding: 0.5rem 0rem;
+                padding: 0.2rem 0;
             }
 
 /*             .hl-first-article,.hl-second-article,.hl-third-article{
@@ -208,12 +212,15 @@
 
 /* carrito */
 
-.card-carrito{
-    width: 50%;
-    margin: auto;
-}
+@media (min-width:1024px){
 
-.carrito-options{
-    width: 55%;
-    margin: 1rem auto;
+    .card-carrito{
+        width: 50%;
+        margin: auto;
+    }
+
+    .carrito-options{
+        width: 55%;
+        margin: 1rem auto;
+    }
 }

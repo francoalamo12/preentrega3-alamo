@@ -95,26 +95,34 @@ html body {
   background-color: grey;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
   gap: 5px;
-  padding: 0rem 1rem;
+  padding: 0.3rem;
   margin: 1.2rem 1.5rem;
 }
 .higlights-grid .hl-first-article, .higlights-grid .hl-second-article, .higlights-grid .hl-third-article {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 5px;
 }
 .higlights-grid .hl-first-article .card-container, .higlights-grid .hl-second-article .card-container, .higlights-grid .hl-third-article .card-container {
+  border: 2px solid blue;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
-.higlights-grid .hl-first-article .card-container .card-img, .higlights-grid .hl-second-article .card-container .card-img, .higlights-grid .hl-third-article .card-container .card-img {
-  max-height: auto;
+.higlights-grid .hl-first-article .card-container .card-container-img, .higlights-grid .hl-second-article .card-container .card-container-img, .higlights-grid .hl-third-article .card-container .card-container-img {
+  flex: 0 0 60%;
+  overflow: hidden;
+}
+.higlights-grid .hl-first-article .card-container .card-container-img .card-img, .higlights-grid .hl-second-article .card-container .card-container-img .card-img, .higlights-grid .hl-third-article .card-container .card-container-img .card-img {
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
+  object-fit: cover;
 }
 .higlights-grid .hl-first-article .card-container .card-body, .higlights-grid .hl-second-article .card-container .card-body, .higlights-grid .hl-third-article .card-container .card-body {
+  flex: 0 0 40%;
   background-color: black;
   text-align: center;
 }
@@ -372,11 +380,14 @@ main .options .options-registrarse .registrarse .registrarse-button {
                     }
                 } */
   }
+  .higlights-grid .hl-first-article, .higlights-grid .hl-second-article {
+    padding: 0.2rem 0;
+  }
   .higlights-grid .hl-third-article {
     display: block;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0rem;
+    padding: 0.2rem 0;
   }
 }
 /* cuenta */
@@ -496,16 +507,16 @@ main .options .options-registrarse .registrarse .registrarse-button {
   }
 }
 /* carrito */
-.card-carrito {
-  width: 50%;
-  margin: auto;
+@media (min-width: 1024px) {
+  .card-carrito {
+    width: 50%;
+    margin: auto;
+  }
+  .carrito-options {
+    width: 55%;
+    margin: 1rem auto;
+  }
 }
-
-.carrito-options {
-  width: 55%;
-  margin: 1rem auto;
-}
-
 #footer {
   background-color: pink;
   display: flex;
