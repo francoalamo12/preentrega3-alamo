@@ -228,8 +228,8 @@ main .options .options-registrarse .registrarse .registrarse-button {
   grid-template-columns: repeat(2, 1fr);
   background-color: black;
   margin-bottom: 1rem;
-  gap: 1rem;
-  row-gap: 1rem;
+  /*     gap: 1rem;
+      row-gap: 1rem; */
 }
 .product-container .product-subcontainer {
   display: flex;
@@ -454,6 +454,8 @@ main .options .options-registrarse .registrarse .registrarse-button {
   .productos-main .search-container {
     display: inline-block;
     flex: 1;
+    margin-top: 0;
+    height: 10rem;
     border: 1px solid black;
   }
   .productos-main .search-container .form-look-for {
@@ -473,6 +475,9 @@ main .options .options-registrarse .registrarse .registrarse-button {
   .productos-main .product-main-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid blue;
     flex: 2;
   }
   .productos-main .product-main-container .product-title {
@@ -486,6 +491,7 @@ main .options .options-registrarse .registrarse .registrarse-button {
   .productos-main .product-main-container .product-container .product-subcontainer {
     display: grid;
     grid-template-columns: auto auto;
+    margin: 0 !important;
     align-content: center;
   }
 }

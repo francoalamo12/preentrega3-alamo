@@ -152,6 +152,8 @@
         .search-container {
             display: inline-block;
             flex: 1;
+            margin-top: 0;
+            height: 10rem;
             border: 1px solid black;
 
             .form-look-for {
@@ -176,6 +178,9 @@
         .product-main-container {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+            border: 3px solid blue;
             flex: 2;
 
             .product-title{
@@ -193,6 +198,7 @@
                 .product-subcontainer{
                     display: grid;
                     grid-template-columns: auto auto;
+                    margin: 0 !important;
                     align-content: center;
                 }
             }
