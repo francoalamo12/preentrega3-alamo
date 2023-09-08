@@ -495,7 +495,6 @@ main .options .options-registrarse .registrarse .registrarse-button {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    border: 3px solid blue;
     flex: 2;
   }
   .productos-main .product-main-container .product-title {
