@@ -1,7 +1,13 @@
-        /* index */
+@import "../utils/vars";
+
+@import "../utils/mixin";
+
+@import "../utils/extend";
+
+/* index */
 
 .main-h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 1rem 0.5rem;
     opacity: 0.5;
     font-family: 'Nunito', sans-serif;
@@ -12,14 +18,12 @@
     .carousel-indicators {
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid black;
     }
 
     .carousel-inner {
         height: auto;
         width: min(95%, 1100px);
         margin: auto;
-        border: 1px solid black;
 
         img {
             height: 30vh;
@@ -28,12 +32,11 @@
 
     .carousel-btn {
         padding: 0 auto;
-        border: 1px solid black;
     }
 }
 
 .index-main-h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: center;
     margin-top: 1.2rem;
@@ -41,8 +44,6 @@
 }
 
 .higlights-grid {
-    background-color: grey;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
@@ -57,12 +58,16 @@
             grid-template-rows: 1fr 1fr;
             gap: 5px;
 
+                .card-container:hover{
+                    box-shadow: $shadow-card-hover;
+                }
+
                 .card-container {
-                border: 2px solid blue;
-                background-color: black;
-                display: flex;
-                flex-direction: column;
+                box-shadow: $shadow-card;
+                border-radius: $border-card;
+                @extend %flex-column;
                 align-items: stretch;
+                margin: 0.8rem;
 
                     .card-container-img {
                         flex: 0 0 60%;
@@ -77,7 +82,6 @@
 
                     .card-body {
                         flex: 0 0 40%;
-                        background-color: black;
                         text-align: center;
 
                         .card-product {
@@ -92,8 +96,7 @@
                         }
 
                         .buy {
-                            padding: 0.2rem 1rem;
-                            font-family: 'Nunito', sans-serif;
+                            @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
                         }
                     }
             }
@@ -121,8 +124,7 @@ main .options {
     padding: 0.5em 1em;
         
     .options-acceder {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         margin: 0rem 1.5rem;
         font-family: 'Nunito', sans-serif;
         
@@ -152,8 +154,7 @@ main .options {
 }
         
     .options-registrarse {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         margin: 0rem 1.5rem;
         font-family: 'Nunito', sans-serif;
         
@@ -212,27 +213,22 @@ main .options {
 .product-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: black;
     margin-bottom: 1rem;
-/*     gap: 1rem;
-    row-gap: 1rem; */
             
     .product-subcontainer {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         justify-content: center;
         align-items: center;
-        background-color: blue;
             
         .product-inner {
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column;
+            border-radius: $border-card;
+            box-shadow: $shadow-card;
             justify-content: center;
             align-items: center;           
             margin: 0.5rem;
             padding: 0.2rem 0;
             width: 10rem;
-            background-color: red;
             
             .product-img {
                 max-width: 100%;
@@ -259,39 +255,38 @@ main .options {
     padding: 0.5rem 1rem;
 
         .contact-form, .contact-others {
-            display: flex;
-            flex-direction: column;
+            @extend %flex-column;
             justify-content: center;
             margin: 0rem 1rem;
             font-family: 'Nunito', sans-serif;
+                }
 
                 input, textarea {
                     width: 100%;
-                }
+                    }
 
                 a {
                     font-size: 0.8rem;
                     text-decoration: none;
                     color: #141313;
-                }
+                    }
 
                 img {
                     height: 2rem;
                     width: 2rem;
-                }
+                    }
     }
-}
 
         /* carrito */
 
 .card-carrito {
     display: flex;
-    border: 1px solid black;
+    box-shadow: $shadow-card-section;
     margin: 1rem 0.5rem;
 
     .img-card {
         flex: 1;
-        border: 1px solid black;
+        box-shadow: $shadow-card-section;
         margin: 0.2rem 0.1rem;
         height: 10rem;
         width: auto;
@@ -299,19 +294,25 @@ main .options {
 
     .text-card {
         flex: 2;
+        box-shadow: $shadow-card-section;
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
         margin: 0.2rem 0.1rem;
 
             .btn-close {
                 align-self: end;
+                box-shadow: $shadow-card-section;
                 margin-top: 0.5rem;
                 margin-right: 0.5rem;
             }
 
+            .btn-close:hover{
+                box-shadow: $shadow-card-hover;
+            }
+
             .card-carrito-title {
                 align-self: start;
+                font-weight: 500;
                 margin: 0.2rem 0.3rem;
                 font-size: 1.1rem;
             }
@@ -320,6 +321,7 @@ main .options {
                 align-self: start;
                 margin: 0 0.2rem 0 0.2rem;
                 font-size: 0.8rem;
+                opacity: 0.7;
 
             }
     }
@@ -327,8 +329,6 @@ main .options {
 
 
 .carrito-options {
-    border: 1px solid black;
-
     display: flex;
     justify-content: end;
     align-items: center;
@@ -336,12 +336,14 @@ main .options {
     margin: 0rem 0.5rem 1rem 0.5rem;
 
         .cancel {
-            padding: 0.3rem 0.8rem;
+            @include btn-mobile(0.3rem 0.8rem, 'Nunito', 0.8rem);
+            border-radius: $border-card-btn;
             margin: 0.2rem 0.3rem 0.2rem 0;
         }
 
         .buy {
-            padding: 0.3rem 0.8rem;
+            @include btn-mobile(0.3rem 0.8rem, 'Nunito', 0.8rem);
+            border-radius: $border-card-btn;
             margin: 0.2rem 0.3rem 0.2rem 0;
         }
 }

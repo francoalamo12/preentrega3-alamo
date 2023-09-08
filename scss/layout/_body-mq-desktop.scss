@@ -1,8 +1,14 @@
+@import "../utils/vars";
+
+@import "../utils/mixin";
+
+@import "../utils/extend";
+
 /* index */
 
 @media (min-width:1024px){
     .main-h1 {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
     }
 
     #carousel-main {
@@ -21,7 +27,8 @@
     }
 
     .index-main-h2 {
-        font-size: 1.5rem;
+        margin-top: 2rem;
+        font-size: 2rem;
     }
 
     .higlights-grid {
@@ -40,17 +47,10 @@
                 flex-direction: column;
                 padding: 0.2rem 0;
             }
-
-/*             .hl-first-article,.hl-second-article,.hl-third-article{
-
-                .card-container {
-                }
-                .card-img {
-                    height: 15rem;
-                }
-            } */
+                    
+        }
     }
-}
+ 
 
 /* cuenta */
 
@@ -66,13 +66,14 @@
             width: 85%;
             justify-content: space-around;
             margin: 5rem auto;
-            border: 1px solid black;
 
 
             .options-acceder{
                 display: flex;
-                border: 1px solid black;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
                 width: 75%;
+                padding: 1rem 1.5rem;
                 flex: 1;
 
                 .micuenta-h2 {
@@ -87,8 +88,10 @@
             .options-registrarse{
                 display: flex;
                 justify-content: start;
-                border: 1px solid black;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
                 width: 75%;
+                padding: 1rem 1.5rem;
                 flex:1;
 
                 .micuenta-h2 {
@@ -117,11 +120,13 @@
             display: flex;
             width: 85%;
             justify-content: space-around;
-            align-items: flex-start;
             margin: 5rem auto;
             
             .contact-form{
                 flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
 
                 .contact-h2{
                     font-size: 1.5rem;
@@ -131,6 +136,9 @@
 
             .contact-others{
                 flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
 
                 .contact-container {
                     margin-bottom: 1rem;
@@ -158,24 +166,19 @@
             flex: 1;
             margin-top: 0;
             height: 10rem;
-            border: 1px solid black;
 
             .form-look-for {
-                border: 1px solid blue;
 
                 .look-for {
-                    border: 1px solid aqua;
                 }
 
                 .look-for-btn {
-                    border: 1px solid pink;
                 }
             }
 
             .dropdown {
                 display: flex;
                 justify-content: flex-end;
-                border: 1px solid black;
             }
         }
 
@@ -217,6 +220,17 @@
     .card-carrito{
         width: 50%;
         margin: auto;
+        margin: 1rem auto;
+
+        .text-card{
+            .card-carrito-title{
+                font-size: 1.2rem;
+            }
+
+            .card-carrito-subtitle{
+                font-size: 1rem;
+            }
+        }
     }
 
     .carrito-options{

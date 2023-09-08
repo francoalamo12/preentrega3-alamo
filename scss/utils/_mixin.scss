@@ -1,0 +1,7 @@
+// mixin boton
+
+@mixin btn-mobile ($padding, $font, $font-size){
+    padding: $padding;
+    font-family: $font;
+    font-size: $font-size;
+}

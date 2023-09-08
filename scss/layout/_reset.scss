@@ -1,3 +1,9 @@
+@import "../utils/vars";
+
+@import "../utils/mixin";
+
+@import "../utils/extend";
+
 * {
     padding: 0px;
     margin: 0px;
@@ -9,4 +15,5 @@ html body {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    background-color: $color-body;
 }

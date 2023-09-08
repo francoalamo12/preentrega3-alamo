@@ -1,3 +1,9 @@
+@import "../utils/vars";
+
+@import "../utils/mixin";
+
+@import "../utils/extend";
+
 #header {
     display: grid;
     grid-template-rows: 1fr;
@@ -5,14 +11,14 @@
 
     height: auto;
 
-    background-color: pink;
+    background-color: $color-main;
 
     .header-first-section {
         justify-self: start;
         align-self: center;
 
         .navbar {
-            background-color: pink;
+            background-color: $color-main;
             margin: 0 auto;
         }
     }
@@ -38,7 +44,7 @@
 
 @media (min-width:1024px){
     #header {
-        height: 10vh;
+        height: auto;
 
         .header-first-section{
             .navbar{
