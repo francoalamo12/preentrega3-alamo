@@ -5,3 +5,15 @@
     font-family: $font;
     font-size: $font-size;
 }
+
+@mixin titles ($size, $font, $weight,){
+    font-size: $size;
+    font-family: $font;
+    font-weight: $weight;
+}
+
+@mixin titles-opacity ($size, $font, $opacity){
+    font-size: $size;
+    font-family: $font;
+    opacity: $opacity;
+}

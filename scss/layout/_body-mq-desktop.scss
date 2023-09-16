@@ -8,7 +8,7 @@
 
 @media (min-width:1024px){
     .main-h1 {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
     }
 
     #carousel-main {
@@ -27,27 +27,12 @@
     }
 
     .index-main-h2 {
-        margin-top: 2rem;
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
-    .higlights-grid {
-        grid-template-columns: repeat(3, 1fr);
-        width: 65%;
-        gap: 5px;
+    .highlights-grid {
+        width: min(80%, 1000px);
         margin-inline: auto;
-
-            .hl-first-article,.hl-second-article{
-                padding: 0.2rem 0;
-            }
-        
-            .hl-third-article {
-                display: block;
-                display: flex;
-                flex-direction: column;
-                padding: 0.2rem 0;
-            }
-                    
         }
     }
  
@@ -58,48 +43,33 @@
 
     main {
 
-        .main-h1 {
-            font-size: 1.8rem;
-        }
         .options {
-            display: flex;
-            width: 85%;
-            justify-content: space-around;
             margin: 5rem auto;
 
 
             .options-acceder{
-                display: flex;
-                box-shadow: $shadow-card-section;
-                border-radius: $border-card-section;
                 width: 75%;
-                padding: 1rem 1.5rem;
-                flex: 1;
+                max-width: 620px;
 
                 .micuenta-h2 {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                 }
 
                 .complete-info {
-                    font-size: 0.8rem;
+                    font-size: 0.85rem;
                 }
             }
 
             .options-registrarse{
-                display: flex;
-                justify-content: start;
-                box-shadow: $shadow-card-section;
-                border-radius: $border-card-section;
                 width: 75%;
-                padding: 1rem 1.5rem;
-                flex:1;
+                max-width: 620px;
 
                 .micuenta-h2 {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                 }
 
                 .complete-info {
-                    font-size: 0.8rem;
+                    font-size: 0.85rem;
                 }
             }
         }
@@ -112,10 +82,6 @@
 
     main {
 
-        .main-h1 {
-            font-size: 1.8rem;
-        }
-
         .contact {
             display: flex;
             width: 85%;
@@ -123,22 +89,21 @@
             margin: 5rem auto;
             
             .contact-form{
-                flex: 1;
+/*                 flex: 1;
                 box-shadow: $shadow-card-section;
                 border-radius: $border-card-section;
-                padding: 1rem 1.5rem;
+                padding: 1rem 1.5rem; */
 
                 .contact-h2{
                     font-size: 1.5rem;
-
                 }
             }
 
             .contact-others{
-                flex: 1;
+/*                 flex: 1;
                 box-shadow: $shadow-card-section;
                 border-radius: $border-card-section;
-                padding: 1rem 1.5rem;
+                padding: 1rem 1.5rem; */
 
                 .contact-container {
                     margin-bottom: 1rem;
@@ -157,15 +122,17 @@
 /* productos */
 
 @media (min-width:1024px){
+
+    /* contenedor principal */
     .productos-main {
         display: flex;
-        width: 90%;
+        width: 100%;
 
+        /* contenedor de busqueda */
         .search-container {
             display: inline-block;
-            flex: 1;
+            flex: 0.5;
             margin-top: 0;
-            height: 10rem;
 
             .form-look-for {
 
@@ -182,10 +149,11 @@
             }
         }
 
+        /* contenedor de productos */
         .product-main-container {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             flex: 2;
 
@@ -197,16 +165,14 @@
             .product-subtitle{
                 margin-top: 0;
                 font-size: 1.2rem;
+                margin-left: 3rem;
             }
 
             .product-container{
-                
-                .product-subcontainer{
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    margin: 0 !important;
-                    align-content: center;
-                }
+                display: flex;
+                justify-content: center;
+                width: 85%;
+                margin: 0 auto 1rem auto;
             }
         }
     }
@@ -217,23 +183,23 @@
 @media (min-width:1024px){
 
     .card-carrito{
-        width: 50%;
-        margin: auto;
-        margin: 1rem auto;
+        width: 65%;
+        max-width: 800px;
 
         .text-card{
             .card-carrito-title{
-                font-size: 1.2rem;
+                @include titles (1.2rem, 'Nunito', 500);
             }
 
             .card-carrito-subtitle{
-                font-size: 1rem;
+                @include titles (1rem, 'Nunito', 400);
             }
         }
     }
 
     .carrito-options{
-        width: 55%;
+        width: 70%;
+        max-width: 830px;
         margin: 1rem auto;
     }
 }

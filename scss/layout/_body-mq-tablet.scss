@@ -1,0 +1,207 @@
+@import "../utils/vars";
+
+@import "../utils/mixin";
+
+@import "../utils/extend";
+
+/* index */
+
+@media (min-width:600px){
+
+    /* titulo principal compartido con todas las paginas */
+    .main-h1{
+        font-size: 1.7rem;
+    }
+
+    /* ver carousel */
+
+    /* higlights */
+
+    .index-main-h2{
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        width: 85%;
+    }
+}
+
+/* cuenta */
+
+@media (min-width: 600px){
+    
+    main {
+
+        /* Contenedor principal */
+
+        .options {
+            display: flex;
+            justify-content: space-around;
+            width: 95%;
+            margin: 5rem auto;
+
+            /* contenedor secundario */
+            .options-acceder {
+                display: flex;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                width: 90%;
+                padding: 1rem 1.5rem;
+                flex: 1;
+
+                /* título de form*/
+                .micuenta-h2 {
+                    @include titles(1.3rem, 'Nunito', 500);
+                }
+        
+                /* labels */
+                .complete-info {
+                    @include titles(0.8rem, 'Nunito', 400);
+                }
+
+                /* subcontenedor */
+                .remember-container-flex {
+
+                    .forgot-password {
+                        @include titles(0.8rem, 'Nunito', 400);
+                    }
+
+                    .remember {
+                        @include titles(0.8rem, 'Nunito', 400);
+                    }
+                }
+
+                /* subcontenedor */
+                .acceder-container-flex {
+                    .acceder {
+                        @include btn-mobile(0.25rem 0.8rem, 'Nunito', 0.8rem);
+                    }
+            }
+
+
+            }
+
+            /* contenedor secundario */
+            .options-registrarse {
+                display: flex;
+                justify-content: start;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                width: 90%;
+                padding: 1rem 1.5rem;
+                flex: 1;
+
+                /* titulo de form */
+                .micuenta-h2 {
+                    @include titles(1.3rem, 'Nunito', 500);
+                }
+        
+                /* labels */
+                .complete-info {
+                    @include titles(0.8rem, 'Nunito', 400);
+                }
+
+                /* subcontenedor */
+                .terms-container-flex {
+                    .terms {
+                        @include titles(0.8rem, 'Nunito', 400);
+                    }
+                }
+
+                /* subcontenedor */
+                .registrarse {
+                    .registrarse-button {
+                        @include btn-mobile(0.25rem 0.8rem, 'Nunito', 0.8rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* producto */
+
+/* contacto */
+
+@media (min-width: 600px){
+
+    main {
+
+        /* contenedor principal */
+        .contact {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            margin: 5rem auto;
+
+            /* subcontenedor */
+            .contact-form {
+                flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
+
+                .contact-h2 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            /* subcontenedor */
+            .contact-others {
+                flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
+
+                .contact-container {
+                    margin-bottom: 1rem;
+                    
+                    .contact-h2{
+                        font-size: 1.3rem;
+                    }
+            }
+        }
+    }
+}
+}
+
+/* carrito */
+
+@media (min-width: 600px){
+
+    main {
+
+        /* contenedor / card */
+        .card-carrito{
+            width: 75%;
+            min-width: 550px;
+
+            .text-card {
+                .card-carrito-title{
+                    @include titles(1.15rem, 'Nunito', 500);
+                }
+
+                .card-carrito-subtitle{
+                    @include titles-opacity (0.9rem, 'Nunito', 0.7);
+                }
+            }
+        }
+
+        /* opciones de compra */
+        .carrito-options {
+            width: 80%;
+            min-width: 570px;
+
+            .cancel {
+                @include btn-mobile(0.35rem 0.8rem, 'Nunito', 0.85rem);
+            }
+    
+            .buy {
+                @include btn-mobile(0.35rem 0.8rem, 'Nunito', 0.85rem);
+            }
+        }
+    }
+}

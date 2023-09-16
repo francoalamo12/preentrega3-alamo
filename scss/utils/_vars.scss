@@ -4,16 +4,22 @@ $color-main: #ff052b;
 
 $color-body: #FFFFFF;
 
-// colores para card y section
+// elementos card
 
 $shadow-card: 0 0 10px rgba(0, 0, 0, 0.695);
-
-$shadow-card-section: 0 0 6px rgba(0, 0, 0, 0.200);
 
 $shadow-card-hover: 0 0 12px rgba(0, 0%, 0%, 0.800);
 
 $border-card: 10px;
 
+// elementos section
+
+$shadow-card-section: 0 0 6px rgba(0, 0, 0, 0.200);
+
 $border-card-section: 6px;
 
-$border-card-btn: 4px;
+// elementos botones
+
+$border-card-btn: 12px;
+
+$btn-background: #000000f4;

@@ -55,8 +55,8 @@
                 <a class="nav-link" href="../index.html">Inicio</a>
                 <a class="nav-link" href="cuenta.html">Mi cuenta</a>
                 <a class="nav-link" href="productos.html">Productos</a>
-                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                <a class="nav-link" href="carrito.html">Carrito</a>
+                <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+                <a class="nav-link active" href="carrito.html">Carrito</a>
               </div>
             </div>
         </div>
@@ -82,59 +82,59 @@
 
   <main>
 
-    <h1 class="main-h1">Contacto</h1>
-
-    <section class="contact">
-
-      <article class="contact-form">
-          <h2 class="contact-h2">Formulario de contato.</h2>
-
-              <form action="">
-
-                  <label for="name">Nombre y Apellido (requerido):</label>
-                  <input type="text" name="name" required>
-                  
-                  <label for="email">Email (requerido):</label>
-                  <input type="email" name="email" required>
-
-                  <label for="id-compra">Orden de Compra (opcional):</label>
-                  <input type="text" name="id-compra">
-
-                  <label for="phone">Telefono (opcional):</label>
-                  <input type="phone" name="phone">
-
-                  <label for="message">Mensaje:</label>
-                  <textarea name="message" cols="40" rows="3"></textarea>
-
-                  <div class="contact-container-flex">
-                    <input type="button" value="Enviar" class="contactar">
-                  </div>
-                  
-              </form>
+    <h1 class="main-h1">Carrito</h1>
+  
+    <!-- listado de productos seleccionados -->
+  
+    <!-- primero -->
+  
+      <article class="card-carrito">
+        <section class="img-side">
+          <img src="../multimedia/img-perfume-hombre-uno.webp" alt="perfume-hombre-l'eau-d'issey-pour-homme-issey-miyake-200ml" class="img-card">
+        </section>
+    
+        <section class="text-card">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            <p class="card-carrito-title">L'eau D'issey</p>
+            <p class="card-carrito-subtitle">Pour Homme by Issey Miyake - 200ml.</p>
+        </section>
       </article>
-
-      <article class="contact-others">
-        <div class="contact-container">
-          <h2 class="contact-h2">Compras y ventas mayoristas:</h2>
-          <a href="https://www.gmail.com"><img src="../multimedia/email.png" alt="mail-para-contacto"></a>
-          <span><a href="https://www.gmail.com">moonmakeup@gmail.com</a></span>
-        </div>
-
-        <div class="contact-container">
-          <h2 class="contact-h2">Pedidos por whatsapp:</h2>
-          <a href="https://www.whatsapp.com"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp"></a>
-          <span><a href="https://www.whatsapp.com">011-1234-5678</a></span>
-        </div>
-
-        <div class="contact-container">
-          <h2 class="contact-h2">Redes sociales:</h2>
-          <a href="https://www.instagram.com"><img src="../multimedia/instagram.png" alt="redireccionamiento-a-nuestro-instagram"></a>
-          <a href="https://www.facebook.com"><img src="../multimedia/facebook.png" alt="redireccionamiento-a-nuestro-facebook"></a>
-        </div>
+  
+    <!-- segundo -->
+  
+      <article class="card-carrito">
+        <section class="img-side">
+          <img src="../multimedia/img-perfume-hombre-dos.webp" alt="perfume-hombre-paco-rabanne-invictus-platinum-Eau-de-Parfum-200ml" class="img-card">
+        </section>
+    
+        <section class="text-card">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            <p class="card-carrito-title">Invictus Platinum</p>
+            <p class="card-carrito-subtitle">Eau de Parfum by Paco Rabanne - 200ml.</p>
+        </section>
       </article>
-
-    </section>
-
+  
+    <!-- tercero -->
+  
+      <article class="card-carrito">
+        <section class="img-side">
+          <img src="../multimedia/img-perfume-hombre-tres.webp" alt="perfume-hombre-jean-paul-gaultier-le-beau-Eau-de-toilette-75ml" class="img-card">
+        </section>
+  
+        <section class="text-card">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            <p class="card-carrito-title">Le Beau</p>
+            <p class="card-carrito-subtitle">Eau de Toilette by Jean Paul Gaultier - 75ml.</p>
+        </section>
+      </article>
+  
+    <!-- acciones -->
+  
+      <section class="carrito-options">
+        <input type="button" value="Cancelar" class="cancel">
+        <input type="button" value="Comprar" class="buy">
+      </section>
+  
   </main>
 
   <!-- footer -->
