@@ -155,6 +155,9 @@ html body {
   background-color: rgba(0, 0, 0, 0.9568627451);
   border: none;
 }
+.highlights-grid .card-container .card-body .buy:active {
+  transform: scale(1.1);
+}
 
 /* cuenta */
 main .micuenta-h2 {
@@ -208,6 +211,9 @@ main .options .options-acceder .acceder-container-flex .acceder {
   background-color: rgba(0, 0, 0, 0.9568627451);
   border: none;
 }
+main .options .options-acceder .acceder-container-flex .acceder:active {
+  transform: scale(1.1);
+}
 main .options .options-registrarse {
   margin: 0rem 1.5rem;
 }
@@ -242,6 +248,9 @@ main .options .options-registrarse .registrarse .registrarse-button {
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.9568627451);
   border: none;
+}
+main .options .options-registrarse .registrarse .registrarse-button:active {
+  transform: scale(1.1);
 }
 
 /* productos */
@@ -401,6 +410,9 @@ main .options .options-registrarse .registrarse .registrarse-button {
   margin: 0.2rem 0.3rem 0.2rem 0;
   border: none;
 }
+.carrito-options .cancel:active {
+  transform: scale(1.1);
+}
 .carrito-options .buy {
   padding: 0.3rem 0.8rem;
   font-family: "Nunito";
@@ -410,6 +422,9 @@ main .options .options-registrarse .registrarse .registrarse-button {
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.9568627451);
   border: none;
+}
+.carrito-options .buy:active {
+  transform: scale(1.1);
 }
 
 .highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse, .product-container .product-inner, .contact .contact-form, .contact .contact-others, .card-carrito .text-card {
@@ -653,20 +668,8 @@ main .options .options-registrarse .registrarse .registrarse-button {
     justify-content: space-around;
     margin: 5rem auto;
   }
-  main .contact .contact-form {
-    /*                 flex: 1;
-                    box-shadow: $shadow-card-section;
-                    border-radius: $border-card-section;
-                    padding: 1rem 1.5rem; */
-  }
   main .contact .contact-form .contact-h2 {
     font-size: 1.5rem;
-  }
-  main .contact .contact-others {
-    /*                 flex: 1;
-                    box-shadow: $shadow-card-section;
-                    border-radius: $border-card-section;
-                    padding: 1rem 1.5rem; */
   }
   main .contact .contact-others .contact-container {
     margin-bottom: 1rem;

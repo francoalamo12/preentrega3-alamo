@@ -90,6 +90,10 @@
                             background-color: $btn-background;
                             border: none;
                         }
+
+                        .buy:active {
+                            transform: $btn-active;
+                        }
                     }
             }
     }
@@ -146,6 +150,10 @@ main .options {
             background-color: $btn-background;
             border: none;
         }
+
+        .acceder:active {
+            transform: $btn-active;
+        }
     }
 }
         
@@ -182,6 +190,10 @@ main .options {
                 color: whitesmoke;
                 background-color: $btn-background;
                 border: none;
+            }
+
+            .registrarse-button:active {
+                transform: $btn-active;
             }
         }
     }
@@ -364,6 +376,10 @@ main .options {
             border: none;
         }
 
+        .cancel:active {
+            transform: $btn-active;
+        }
+
         .buy {
             @include btn-mobile(0.3rem 0.8rem, 'Nunito', 0.8rem);
             border-radius: $border-card-btn;
@@ -371,5 +387,9 @@ main .options {
             color: whitesmoke;
             background-color: $btn-background;
             border: none;
+        }
+
+        .buy:active {
+            transform: $btn-active;
         }
 }
