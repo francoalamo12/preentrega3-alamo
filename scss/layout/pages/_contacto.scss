@@ -1,0 +1,133 @@
+@import "../../utils/extend";
+
+@import "../../utils/mixin";
+
+@import "../../utils/vars";
+
+/* contacto - mobile */
+
+/* contenedor principal */     
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+    /* contenedor secundario */
+    .contact-form {
+        @extend %flex-column;
+        justify-content: center;
+        margin: 0rem 1rem;
+        font-family: 'Nunito', sans-serif;
+
+        .contact-h2 {
+            @include titles(1.2rem, 'Nunito', 500);
+            text-align: justify;
+        }
+
+        input, textarea {
+            width: 100%;
+            }
+    }
+
+    /* contenedor secundario */
+    .contact-others {
+        @extend %flex-column;
+        justify-content: center;
+        margin: 0rem 1rem;
+        font-family: 'Nunito', sans-serif;
+
+        a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #141313;
+            }
+
+        img {
+            height: 2rem;
+            width: 2rem;
+            }
+    }
+}
+
+/* tablet */
+
+@media (min-width: 600px){
+
+    main {
+
+        /* contenedor principal */
+        .contact {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            margin: 5rem auto;
+
+            /* subcontenedor */
+            .contact-form {
+                flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
+
+                .contact-h2 {
+                    font-size: 1.3rem;
+                }
+            }
+
+            /* subcontenedor */
+            .contact-others {
+                flex: 1;
+                box-shadow: $shadow-card-section;
+                border-radius: $border-card-section;
+                padding: 1rem 1.5rem;
+
+                .contact-container {
+                    margin-bottom: 1rem;
+                    
+                    .contact-h2{
+                        font-size: 1.3rem;
+                    }
+            }
+        }
+    }
+}
+}
+
+/* desktop */
+
+@media (min-width:1024px){
+
+    main {
+
+        .contact {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            margin: 5rem auto;
+            
+            .contact-form{
+
+                .contact-h2{
+                    font-size: 1.5rem;
+                }
+            }
+
+            .contact-others{
+
+                .contact-container {
+                    margin-bottom: 1rem;
+                    
+                    .contact-h2{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+

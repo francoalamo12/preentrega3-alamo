@@ -1,0 +1,154 @@
+@import "../../utils/extend";
+
+@import "../../utils/mixin";
+
+@import "../../utils/vars";
+
+/* carrito - mobile */
+
+/* contenedor / card */
+.card-carrito {
+    display: flex;
+    box-shadow: $shadow-card-section;
+    margin: 1rem auto;
+    width: 90%;
+
+    /* imagen */
+    .img-card {
+        flex: 1;
+        box-shadow: $shadow-card-section;
+        margin: 0.2rem 0.1rem;
+        height: 10rem;
+        width: auto;
+    }
+
+    /* texto */
+    .text-card {
+        flex: 2;
+        box-shadow: $shadow-card-section;
+        @extend %flex-column;
+        margin: 0.2rem 0.1rem;
+
+            /* boton close + hover */
+            .btn-close {
+                align-self: end;
+                box-shadow: $shadow-card-section;
+                margin-top: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .btn-close:hover{
+                box-shadow: $shadow-card-hover;
+            }
+
+            /* textos */
+            .card-carrito-title {
+                align-self: start;
+                margin: 0.2rem 0.3rem;
+                @include titles(1.1rem, 'Nunito', 500);
+            }
+
+            .card-carrito-subtitle {
+                align-self: start;
+                margin: 0 0.2rem 0 0.2rem;
+                @include titles-opacity (0.8rem, 'Nunito', 0.7);
+            }
+    }
+}
+
+/* opciones de compra */
+.carrito-options {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 92%;
+    margin: 0 auto 1rem auto;
+
+        .cancel {
+            @include btn-mobile(0.3rem 0.8rem, 'Nunito', 0.8rem);
+            border-radius: $border-card-btn;
+            margin: 0.2rem 0.3rem 0.2rem 0;
+            border: none;
+        }
+
+        .cancel:active {
+            transform: $btn-active;
+        }
+
+        .buy {
+            @include btn-mobile(0.3rem 0.8rem, 'Nunito', 0.8rem);
+            border-radius: $border-card-btn;
+            margin: 0.2rem 0.3rem 0.2rem 0;
+            color: whitesmoke;
+            background-color: $btn-background;
+            border: none;
+        }
+
+        .buy:active {
+            transform: $btn-active;
+        }
+}
+
+/* tablet */
+
+@media (min-width: 600px){
+    
+    main {
+
+        /* contenedor / card */
+        .card-carrito{
+            width: 75%;
+            min-width: 550px;
+
+            .text-card {
+                .card-carrito-title{
+                    @include titles(1.15rem, 'Nunito', 500);
+                }
+
+                .card-carrito-subtitle{
+                    @include titles-opacity (0.9rem, 'Nunito', 0.7);
+                }
+            }
+        }
+
+        /* opciones de compra */
+        .carrito-options {
+            width: 80%;
+            min-width: 570px;
+
+            .cancel {
+                @include btn-mobile(0.35rem 0.8rem, 'Nunito', 0.85rem);
+            }
+    
+            .buy {
+                @include btn-mobile(0.35rem 0.8rem, 'Nunito', 0.85rem);
+            }
+        }
+    }
+}
+
+/* desktop */
+
+@media (min-width:1024px){
+
+    .card-carrito{
+        width: 65%;
+        max-width: 800px;
+
+        .text-card{
+            .card-carrito-title{
+                @include titles (1.2rem, 'Nunito', 500);
+            }
+
+            .card-carrito-subtitle{
+                @include titles (1rem, 'Nunito', 400);
+            }
+        }
+    }
+
+    .carrito-options{
+        width: 70%;
+        max-width: 830px;
+        margin: 1rem auto;
+    }
+}

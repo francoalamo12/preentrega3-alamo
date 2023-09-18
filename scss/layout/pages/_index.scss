@@ -1,0 +1,157 @@
+@import "../../utils/extend";
+
+@import "../../utils/mixin";
+
+@import "../../utils/vars";
+
+
+/* index - mobile */
+
+.main-h1 {
+    @include titles-opacity(1.6rem, 'Nunito', 0.5);
+    margin: 1rem 0.5rem;
+}
+
+#carousel-main{
+
+    .carousel-indicators {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .carousel-inner {
+        height: auto;
+        width: min(95%, 1100px);
+        margin: auto;
+
+        img {
+            height: 30vh;
+        }
+    }
+
+    .carousel-btn {
+        padding: 0 auto;
+    }
+}
+
+.index-main-h2 {
+    @include titles(1.4rem, 'Nunito', 600);
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+
+    padding: 0.3rem;
+    margin: 1.2rem auto;
+
+                .card-container:hover{
+                    box-shadow: $shadow-card-hover;
+                }
+
+                .card-container {
+                box-shadow: $shadow-card;
+                border-radius: $border-card;
+                @extend %flex-column;
+                align-items: stretch;
+                margin: 0.8rem;
+
+                    .card-container-img {
+                        flex: 0 0 60%;
+                        overflow: hidden;
+
+                        .card-img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        }
+                    }
+
+                    .card-body {
+                        flex: 0 0 40%;
+                        text-align: center;
+
+                        .card-product {
+                            @include titles(1rem, 'nunito', 500);
+                            font-size: 1rem;
+                            font-family: 'Nunito', sans-serif;
+                        }
+
+                        .card-product-description {
+                            @include titles-opacity(0.8rem, 'nunito', 0.8);
+                        }
+
+                        .buy {
+                            @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
+                            border-radius: $border-card-btn;
+                            color: whitesmoke;
+                            background-color: $btn-background;
+                            border: none;
+                        }
+
+                        .buy:active {
+                            transform: $btn-active;
+                        }
+                    }
+            }
+    }
+
+/* tablet */
+
+@media (min-width:600px){
+
+    /* titulo principal compartido con todas las paginas */
+    .main-h1{
+        font-size: 1.7rem;
+    }
+    
+    /* ver carousel */
+    
+    /* higlights */
+    
+    .index-main-h2{
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        width: 85%;
+        }
+    }
+
+/* desktop */
+
+@media (min-width:1024px){
+    .main-h1 {
+        font-size: 1.8rem;
+        }
+    
+    #carousel-main {
+        height: auto;
+        width: 90%;
+        margin: auto;
+             
+            img {
+                height: auto;
+            }
+    
+        .carousel-control-prev-icon,.carousel-control-next-icon{
+            filter: invert(100%);
+            }
+            
+        }
+    
+    .index-main-h2 {
+        font-size: 1.7rem;
+    }
+    
+    .highlights-grid {
+        width: min(80%, 1000px);
+        margin-inline: auto;
+        }
+    }

@@ -4,12 +4,23 @@
 //header
 @import "layout/header";
 
-//mq
-@import "layout/body-mq-mobile";
+//paginas con media queries
 
-@import "layout/body-mq-tablet";
+@import "layout/pages/index";
 
-@import "layout/body-mq-desktop";
+@import "layout/pages/cuenta";
+
+@import "layout/pages/tienda";
+
+@import "layout/pages/contacto";
+
+@import "layout/pages/carrito";
+
+//@import "layout/body-mq-mobile";
+
+//@import "layout/body-mq-tablet";
+
+//@import "layout/body-mq-desktop";
 
 //footer
 @import "layout/footer";
