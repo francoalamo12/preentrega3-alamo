@@ -73,7 +73,7 @@ html body {
   flex-direction: column;
 }
 
-/* index */
+/* index - mobile */
 .main-h1 {
   font-size: 1.6rem;
   font-family: "Nunito";
@@ -159,7 +159,54 @@ html body {
   transform: scale(1.1);
 }
 
-/* cuenta */
+/* tablet */
+@media (min-width: 600px) {
+  /* titulo principal compartido con todas las paginas */
+  .main-h1 {
+    font-size: 1.7rem;
+  }
+  /* ver carousel */
+  /* higlights */
+  .index-main-h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 85%;
+  }
+}
+/* desktop */
+@media (min-width: 1024px) {
+  .main-h1 {
+    font-size: 1.8rem;
+  }
+  #carousel-main {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+  #carousel-main img {
+    height: auto;
+  }
+  #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  .index-main-h2 {
+    font-size: 1.7rem;
+  }
+  .highlights-grid {
+    width: min(80%, 1000px);
+    margin-inline: auto;
+  }
+}
+.card-carrito .text-card, .contact .contact-others, .contact .contact-form, .product-container .product-inner, main .options .options-registrarse, main .options .options-acceder, .highlights-grid .card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* cuenta - mobile */
 main .micuenta-h2 {
   font-size: 1.2rem;
   font-family: "Nunito";
@@ -253,204 +300,7 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
   transform: scale(1.1);
 }
 
-/* productos */
-.search-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.search-container .d-flex {
-  padding: 0;
-}
-.search-container .dropdown {
-  padding-left: 1rem;
-}
-
-.product-title {
-  font-size: 1.4rem;
-  font-family: "Nunito";
-  font-weight: 600;
-  margin: 0.8rem;
-}
-
-.product-subtitle {
-  font-size: 1.1rem;
-  font-family: "Nunito";
-  opacity: 0.4;
-  margin: 1rem 1.2rem;
-}
-
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
-  border: 2px solid black;
-  margin-bottom: 1rem;
-}
-.product-container .product-inner {
-  border: 2px solid blue;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.695);
-  justify-content: center;
-  align-items: center;
-  margin: 0.5rem;
-  padding: 0.2rem 0;
-  width: 10rem;
-}
-.product-container .product-inner .product-inner-img .product-img {
-  max-width: 100%;
-  height: 8rem;
-}
-.product-container .product-inner .product-inner-text {
-  text-align: center;
-}
-
-/* contacto */
-/* contenedor principal */
-.contact {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  /* contenedor secundario */
-  /* contenedor secundario */
-}
-.contact .contact-form {
-  justify-content: center;
-  margin: 0rem 1rem;
-  font-family: "Nunito", sans-serif;
-}
-.contact .contact-form .contact-h2 {
-  font-size: 1.2rem;
-  font-family: "Nunito";
-  font-weight: 500;
-  text-align: justify;
-}
-.contact .contact-form input, .contact .contact-form textarea {
-  width: 100%;
-}
-.contact .contact-others {
-  justify-content: center;
-  margin: 0rem 1rem;
-  font-family: "Nunito", sans-serif;
-}
-.contact .contact-others a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: #141313;
-}
-.contact .contact-others img {
-  height: 2rem;
-  width: 2rem;
-}
-
-/* carrito */
-/* contenedor / card */
-.card-carrito {
-  display: flex;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: 1rem auto;
-  width: 90%;
-  /* imagen */
-  /* texto */
-}
-.card-carrito .img-card {
-  flex: 1;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: 0.2rem 0.1rem;
-  height: 10rem;
-  width: auto;
-}
-.card-carrito .text-card {
-  flex: 2;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin: 0.2rem 0.1rem;
-  /* boton close + hover */
-  /* textos */
-}
-.card-carrito .text-card .btn-close {
-  align-self: end;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-}
-.card-carrito .text-card .btn-close:hover {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-}
-.card-carrito .text-card .card-carrito-title {
-  align-self: start;
-  margin: 0.2rem 0.3rem;
-  font-size: 1.1rem;
-  font-family: "Nunito";
-  font-weight: 500;
-}
-.card-carrito .text-card .card-carrito-subtitle {
-  align-self: start;
-  margin: 0 0.2rem 0 0.2rem;
-  font-size: 0.8rem;
-  font-family: "Nunito";
-  opacity: 0.7;
-}
-
-/* opciones de compra */
-.carrito-options {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 92%;
-  margin: 0 auto 1rem auto;
-}
-.carrito-options .cancel {
-  padding: 0.3rem 0.8rem;
-  font-family: "Nunito";
-  font-size: 0.8rem;
-  border-radius: 12px;
-  margin: 0.2rem 0.3rem 0.2rem 0;
-  border: none;
-}
-.carrito-options .cancel:active {
-  transform: scale(1.1);
-}
-.carrito-options .buy {
-  padding: 0.3rem 0.8rem;
-  font-family: "Nunito";
-  font-size: 0.8rem;
-  border-radius: 12px;
-  margin: 0.2rem 0.3rem 0.2rem 0;
-  color: whitesmoke;
-  background-color: rgba(0, 0, 0, 0.9568627451);
-  border: none;
-}
-.carrito-options .buy:active {
-  transform: scale(1.1);
-}
-
-.highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse, .product-container .product-inner, .contact .contact-form, .contact .contact-others, .card-carrito .text-card {
-  display: flex;
-  flex-direction: column;
-}
-
-/* index */
-@media (min-width: 600px) {
-  /* titulo principal compartido con todas las paginas */
-  .main-h1 {
-    font-size: 1.7rem;
-  }
-  /* ver carousel */
-  /* higlights */
-  .index-main-h2 {
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-  }
-  .highlights-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    width: 85%;
-  }
-}
-/* cuenta */
+/* tablet */
 @media (min-width: 600px) {
   main {
     /* Contenedor principal */
@@ -534,107 +384,7 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
     font-size: 0.8rem;
   }
 }
-/* producto */
-/* contacto */
-@media (min-width: 600px) {
-  main {
-    /* contenedor principal */
-  }
-  main .contact {
-    display: flex;
-    width: 85%;
-    justify-content: space-around;
-    margin: 5rem auto;
-    /* subcontenedor */
-    /* subcontenedor */
-  }
-  main .contact .contact-form {
-    flex: 1;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
-  }
-  main .contact .contact-form .contact-h2 {
-    font-size: 1.3rem;
-  }
-  main .contact .contact-others {
-    flex: 1;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
-  }
-  main .contact .contact-others .contact-container {
-    margin-bottom: 1rem;
-  }
-  main .contact .contact-others .contact-container .contact-h2 {
-    font-size: 1.3rem;
-  }
-}
-/* carrito */
-@media (min-width: 600px) {
-  main {
-    /* contenedor / card */
-    /* opciones de compra */
-  }
-  main .card-carrito {
-    width: 75%;
-    min-width: 550px;
-  }
-  main .card-carrito .text-card .card-carrito-title {
-    font-size: 1.15rem;
-    font-family: "Nunito";
-    font-weight: 500;
-  }
-  main .card-carrito .text-card .card-carrito-subtitle {
-    font-size: 0.9rem;
-    font-family: "Nunito";
-    opacity: 0.7;
-  }
-  main .carrito-options {
-    width: 80%;
-    min-width: 570px;
-  }
-  main .carrito-options .cancel {
-    padding: 0.35rem 0.8rem;
-    font-family: "Nunito";
-    font-size: 0.85rem;
-  }
-  main .carrito-options .buy {
-    padding: 0.35rem 0.8rem;
-    font-family: "Nunito";
-    font-size: 0.85rem;
-  }
-}
-.highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse, .product-container .product-inner, .contact .contact-form, .contact .contact-others, .card-carrito .text-card {
-  display: flex;
-  flex-direction: column;
-}
-
-/* index */
-@media (min-width: 1024px) {
-  .main-h1 {
-    font-size: 1.8rem;
-  }
-  #carousel-main {
-    height: auto;
-    width: 90%;
-    margin: auto;
-  }
-  #carousel-main img {
-    height: auto;
-  }
-  #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
-    filter: invert(100%);
-  }
-  .index-main-h2 {
-    font-size: 1.7rem;
-  }
-  .highlights-grid {
-    width: min(80%, 1000px);
-    margin-inline: auto;
-  }
-}
-/* cuenta */
+/* desktop */
 @media (min-width: 1024px) {
   main .options {
     margin: 5rem auto;
@@ -660,25 +410,72 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
     font-size: 0.85rem;
   }
 }
-/* contacto */
-@media (min-width: 1024px) {
-  main .contact {
+.card-carrito .text-card, .contact .contact-others, .contact .contact-form, .product-container .product-inner, .highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse {
+  display: flex;
+  flex-direction: column;
+}
+
+/* tienda - mobile */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.search-container .d-flex {
+  padding: 0;
+}
+.search-container .dropdown {
+  padding-left: 1rem;
+}
+
+.product-title {
+  font-size: 1.4rem;
+  font-family: "Nunito";
+  font-weight: 600;
+  margin: 0.8rem;
+}
+
+.product-subtitle {
+  font-size: 1.1rem;
+  font-family: "Nunito";
+  opacity: 0.4;
+  margin: 1rem 1.2rem;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  border: 2px solid black;
+  margin-bottom: 1rem;
+}
+.product-container .product-inner {
+  border: 2px solid blue;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.695);
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.2rem 0;
+  width: 10rem;
+}
+.product-container .product-inner .product-inner-img .product-img {
+  max-width: 100%;
+  height: 8rem;
+}
+.product-container .product-inner .product-inner-text {
+  text-align: center;
+}
+
+/* tablet */
+@media (min-width: 600px) {
+  .product-container {
     display: flex;
-    width: 85%;
-    justify-content: space-around;
-    margin: 5rem auto;
-  }
-  main .contact .contact-form .contact-h2 {
-    font-size: 1.5rem;
-  }
-  main .contact .contact-others .contact-container {
-    margin-bottom: 1rem;
-  }
-  main .contact .contact-others .contact-container .contact-h2 {
-    font-size: 1.5rem;
   }
 }
-/* productos */
+/* pendiente jeje */
+/* desktop */
 @media (min-width: 1024px) {
   /* contenedor principal */
   .productos-main {
@@ -719,7 +516,226 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
     margin: 0 auto 1rem auto;
   }
 }
-/* carrito */
+.card-carrito .text-card, .contact .contact-others, .contact .contact-form, .highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse, .product-container .product-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* contacto - mobile */
+/* contenedor principal */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  /* contenedor secundario */
+  /* contenedor secundario */
+}
+.contact .contact-form {
+  justify-content: center;
+  margin: 0rem 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.contact .contact-form .contact-h2 {
+  font-size: 1.2rem;
+  font-family: "Nunito";
+  font-weight: 500;
+  text-align: justify;
+}
+.contact .contact-form input, .contact .contact-form textarea {
+  width: 100%;
+}
+.contact .contact-others {
+  justify-content: center;
+  margin: 0rem 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.contact .contact-others a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #141313;
+}
+.contact .contact-others img {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* tablet */
+@media (min-width: 600px) {
+  main {
+    /* contenedor principal */
+  }
+  main .contact {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    margin: 5rem auto;
+    /* subcontenedor */
+    /* subcontenedor */
+  }
+  main .contact .contact-form {
+    flex: 1;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+  }
+  main .contact .contact-form .contact-h2 {
+    font-size: 1.3rem;
+  }
+  main .contact .contact-others {
+    flex: 1;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+  }
+  main .contact .contact-others .contact-container {
+    margin-bottom: 1rem;
+  }
+  main .contact .contact-others .contact-container .contact-h2 {
+    font-size: 1.3rem;
+  }
+}
+/* desktop */
+@media (min-width: 1024px) {
+  main .contact {
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    margin: 5rem auto;
+  }
+  main .contact .contact-form .contact-h2 {
+    font-size: 1.5rem;
+  }
+  main .contact .contact-others .contact-container {
+    margin-bottom: 1rem;
+  }
+  main .contact .contact-others .contact-container .contact-h2 {
+    font-size: 1.5rem;
+  }
+}
+.card-carrito .text-card, .highlights-grid .card-container, main .options .options-acceder, main .options .options-registrarse, .product-container .product-inner, .contact .contact-form, .contact .contact-others {
+  display: flex;
+  flex-direction: column;
+}
+
+/* carrito - mobile */
+/* contenedor / card */
+.card-carrito {
+  display: flex;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  width: 90%;
+  /* imagen */
+  /* texto */
+}
+.card-carrito .img-card {
+  flex: 1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: 0.2rem 0.1rem;
+  height: 10rem;
+  width: auto;
+}
+.card-carrito .text-card {
+  flex: 2;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin: 0.2rem 0.1rem;
+  /* boton close + hover */
+  /* textos */
+}
+.card-carrito .text-card .btn-close {
+  align-self: end;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.card-carrito .text-card .btn-close:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+.card-carrito .text-card .card-carrito-title {
+  align-self: start;
+  margin: 0.2rem 0.3rem;
+  font-size: 1.1rem;
+  font-family: "Nunito";
+  font-weight: 500;
+}
+.card-carrito .text-card .card-carrito-subtitle {
+  align-self: start;
+  margin: 0 0.2rem 0 0.2rem;
+  font-size: 0.8rem;
+  font-family: "Nunito";
+  opacity: 0.7;
+}
+
+/* opciones de compra */
+.carrito-options {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto 1rem auto;
+}
+.carrito-options .cancel {
+  padding: 0.3rem 0.8rem;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+  border-radius: 12px;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  border: none;
+}
+.carrito-options .cancel:active {
+  transform: scale(1.1);
+}
+.carrito-options .buy {
+  padding: 0.3rem 0.8rem;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+  border-radius: 12px;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.9568627451);
+  border: none;
+}
+.carrito-options .buy:active {
+  transform: scale(1.1);
+}
+
+/* tablet */
+@media (min-width: 600px) {
+  main {
+    /* contenedor / card */
+    /* opciones de compra */
+  }
+  main .card-carrito {
+    width: 75%;
+    min-width: 550px;
+  }
+  main .card-carrito .text-card .card-carrito-title {
+    font-size: 1.15rem;
+    font-family: "Nunito";
+    font-weight: 500;
+  }
+  main .card-carrito .text-card .card-carrito-subtitle {
+    font-size: 0.9rem;
+    font-family: "Nunito";
+    opacity: 0.7;
+  }
+  main .carrito-options {
+    width: 80%;
+    min-width: 570px;
+  }
+  main .carrito-options .cancel {
+    padding: 0.35rem 0.8rem;
+    font-family: "Nunito";
+    font-size: 0.85rem;
+  }
+  main .carrito-options .buy {
+    padding: 0.35rem 0.8rem;
+    font-family: "Nunito";
+    font-size: 0.85rem;
+  }
+}
+/* desktop */
 @media (min-width: 1024px) {
   .card-carrito {
     width: 65%;

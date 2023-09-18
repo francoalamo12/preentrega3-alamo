@@ -68,6 +68,13 @@ margin-bottom: 1rem;
 
 /* tablet */
 
+@media (min-width:600px){
+
+    .product-container{
+        display: flex;
+    }
+}
+
 /* pendiente jeje */
 
 /* desktop */
