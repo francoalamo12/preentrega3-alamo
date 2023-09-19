@@ -11,8 +11,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
-
-    gap: 1rem;
     padding: 0.5rem 1rem;
 
     /* contenedor secundario */
@@ -24,12 +22,39 @@
 
         .contact-h2 {
             @include titles(1.2rem, 'Nunito', 500);
-            text-align: justify;
+            text-align: start;
         }
 
-        input, textarea {
+        .form-label{
             width: 100%;
+            @include titles(0.8rem, 'Nunito', 400);
+            margin: 0.5rem auto 0 auto;
+        }
+
+        .form-input{
+            width: 100%;
+            background-color: $input-bg;
+            border: $input-border;
+            border-radius: $input-border;
+            color: #33475b;
+        }
+
+        .form-input:focus{
+            outline: none;
+        }
+
+        .contact-container {
+            text-align: end;
+
+            .contactar{
+                @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
+                background-color: $btn-background;
+                border-radius: $border-card-btn;
+                color: whitesmoke;
+                border: none;
+                margin-top: 0.5rem;
             }
+        }
     }
 
     /* contenedor secundario */

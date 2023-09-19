@@ -527,7 +527,6 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
-  gap: 1rem;
   padding: 0.5rem 1rem;
   /* contenedor secundario */
   /* contenedor secundario */
@@ -541,10 +540,37 @@ main .options .options-registrarse .registrarse .registrarse-button:active {
   font-size: 1.2rem;
   font-family: "Nunito";
   font-weight: 500;
-  text-align: justify;
+  text-align: start;
 }
-.contact .contact-form input, .contact .contact-form textarea {
+.contact .contact-form .form-label {
   width: 100%;
+  font-size: 0.8rem;
+  font-family: "Nunito";
+  font-weight: 400;
+  margin: 0.5rem auto 0 auto;
+}
+.contact .contact-form .form-input {
+  width: 100%;
+  background-color: #f5f8fa;
+  border: 3px;
+  border-radius: 3px;
+  color: #33475b;
+}
+.contact .contact-form .form-input:focus {
+  outline: none;
+}
+.contact .contact-form .contact-container {
+  text-align: end;
+}
+.contact .contact-form .contact-container .contactar {
+  padding: 0.2rem 1rem;
+  font-family: "Nunito";
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.9568627451);
+  border-radius: 12px;
+  color: whitesmoke;
+  border: none;
+  margin-top: 0.5rem;
 }
 .contact .contact-others {
   justify-content: center;
