@@ -40,56 +40,52 @@
     margin-top: 1.2rem;
 }
 
+/* destacados */
+
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
-
-    padding: 0.3rem;
     margin: 1.2rem auto;
 
-                .card-container:hover{
-                    box-shadow: $shadow-card-hover;
-                }
+    /* cards */
 
-                .card-container {
-                box-shadow: $shadow-card;
-                border-radius: $border-card;
-                @extend %flex-column;
-                align-items: stretch;
-                margin: 0.8rem;
+    .card-container {
+        box-shadow: $shadow-card;
+        border-radius: $border-card;
+        @extend %flex-column;
+        align-items: stretch;
+        margin: 0.8rem;
 
-                    .card-container-img {
-                        flex: 0 0 60%;
-                        overflow: hidden;
+            .card-container-img {
+                flex: 2;
+                overflow: hidden;
 
-                        .card-img{
+                    .card-img{
                         height: 100%;
                         width: 100%;
-                        object-fit: cover;
+                        object-fit: fill;
                         }
-                    }
+                }
 
-                    .card-body {
-                        flex: 0 0 40%;
-                        text-align: center;
+            .card-body {
+                flex: 1;
+                text-align: center;
 
-                        .card-product {
-                            @include titles(1rem, 'nunito', 500);
-                            font-size: 1rem;
-                            font-family: 'Nunito', sans-serif;
+                    .card-product {
+                        @include titles(1rem, 'nunito', 500);
                         }
 
-                        .card-product-description {
-                            @include titles-opacity(0.8rem, 'nunito', 0.8);
+                    .card-product-description {
+                        @include titles-opacity(0.8rem, 'nunito', 0.8);
                         }
 
-                        .buy {
-                            @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
-                            border-radius: $border-card-btn;
-                            color: whitesmoke;
-                            background-color: $btn-background;
-                            border: none;
+                    .buy {
+                        @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
+                        border-radius: $border-card-btn;
+                        color: whitesmoke;
+                        background-color: $btn-background;
+                        border: none;
                         }
 
                         .buy:active {
@@ -97,7 +93,11 @@
                         }
                     }
             }
-    }
+
+    .card-container:hover{
+        box-shadow: $shadow-card-hover;
+        }
+}
 
 /* tablet */
 

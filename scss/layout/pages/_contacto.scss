@@ -16,9 +16,9 @@
     /* contenedor secundario */
     .contact-form {
         @extend %flex-column;
-        justify-content: center;
-        margin: 0rem 1rem;
-        font-family: 'Nunito', sans-serif;
+        @extend %card-padding-margin;
+        box-shadow: $shadow-card-section;
+        border-radius: $border-card-section;
 
         .contact-h2 {
             @include titles(1.2rem, 'Nunito', 500);
@@ -33,14 +33,11 @@
 
         .form-input{
             width: 100%;
-            background-color: $input-bg;
-            border: $input-border;
-            border-radius: $input-border;
-            color: #33475b;
+            @extend %input;
         }
 
         .form-input:focus{
-            outline: none;
+            outline: $input-outline;
         }
 
         .contact-container {
@@ -60,20 +57,26 @@
     /* contenedor secundario */
     .contact-others {
         @extend %flex-column;
-        justify-content: center;
-        margin: 0rem 1rem;
+        @extend %card-padding-margin;
+        box-shadow: $shadow-card-section;
+        border-radius: $border-card-section;
         font-family: 'Nunito', sans-serif;
 
-        a {
-            font-size: 0.8rem;
-            text-decoration: none;
-            color: #141313;
-            }
+        .contact-apart {
+            flex: 1;
+            
+            a {
+                font-size: 0.8rem;
+                text-decoration: none;
+                color: #141313;
+                }
+    
+            img {
+                height: 2rem;
+                width: 2rem;
+                }
+        }
 
-        img {
-            height: 2rem;
-            width: 2rem;
-            }
     }
 }
 
@@ -93,8 +96,6 @@
             /* subcontenedor */
             .contact-form {
                 flex: 1;
-                box-shadow: $shadow-card-section;
-                border-radius: $border-card-section;
                 padding: 1rem 1.5rem;
 
                 .contact-h2 {
@@ -105,11 +106,9 @@
             /* subcontenedor */
             .contact-others {
                 flex: 1;
-                box-shadow: $shadow-card-section;
-                border-radius: $border-card-section;
                 padding: 1rem 1.5rem;
 
-                .contact-container {
+                .contact-apart {
                     margin-bottom: 1rem;
                     
                     .contact-h2{
@@ -142,7 +141,7 @@
 
             .contact-others{
 
-                .contact-container {
+                .contact-apart {
                     margin-bottom: 1rem;
                     
                     .contact-h2{

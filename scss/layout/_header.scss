@@ -20,6 +20,18 @@
         .navbar {
             background-color: $color-main;
             margin: 0 auto;
+
+            .menu {
+
+                .menu-page {
+                    @include titles (0.8rem, 'Nunito', 500);
+                    color: $color-body;
+                }
+
+                .menu-page:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -28,7 +40,10 @@
         align-self: center;
 
         .logo {
-            height: 1rem;
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            max-height: 3rem;
         }
     }
 
@@ -37,6 +52,7 @@
         align-self: center;
 
         .cuenta, .carrito {
+            height: 2.2rem;
             padding-right: 0.5rem;
         }
     }
@@ -63,13 +79,13 @@
 
         .header-second-section{
             .logo{
-                height: 7vh;
+                /* height: 3rem; */
             }
         }
 
         .header-third-section{
             .cuenta, .carrito{
-                height: 2.2rem;
+                height: 2.5rem;
             }
             }
         

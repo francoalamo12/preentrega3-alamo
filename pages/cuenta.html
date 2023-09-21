@@ -53,12 +53,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="../index.html">Inicio</a>
-                <a class="nav-link active" aria-current="page" href="cuenta.html">Mi cuenta</a>
-                <a class="nav-link" href="tienda.html">Tienda</a>
-                <a class="nav-link" href="contacto.html">Contacto</a>
-                <a class="nav-link" href="carrito.html">Carrito</a>
+              <div class="navbar-nav menu">
+                <a class="nav-link menu-page" href="../index.html">Inicio</a>
+                <a class="nav-link active menu-page" aria-current="page" href="cuenta.html">Mi cuenta</a>
+                <a class="nav-link menu-page" href="tienda.html">Tienda</a>
+                <a class="nav-link menu-page" href="contacto.html">Contacto</a>
+                <a class="nav-link menu-page" href="carrito.html">Carrito</a>
               </div>
             </div>
         </div>
@@ -68,14 +68,14 @@
         <!-- logo -->
 
         <div class="header-second-section">
-            <a href="../index.html"><img src="../multimedia/moon-logo-black-b.png" alt="Moon-Makeup-Logo" class="logo"></a>
+            <a href="../index.html"><img src="../multimedia/moon-logo-white.png" alt="Moon-Makeup-Logo" class="logo"></a>
         </div>
 
         <!-- demás imgs del header -->
 
         <div class="header-third-section">
-            <a href="cuenta.html"><img src="../multimedia/account.png" alt="Mi-Cuenta-Acceso-Directo" class="cuenta"></a>
-            <a href="carrito.html"><img src="../multimedia/shopping-bag.png" alt="Carrito-Acceso-Directo" class="carrito"></a>
+            <a href="cuenta.html"><img src="../multimedia/account-white.png" alt="Mi-Cuenta-Acceso-Directo" class="cuenta"></a>
+            <a href="carrito.html"><img src="../multimedia/shopping-bag-white.png" alt="Carrito-Acceso-Directo" class="carrito"></a>
         </div>
 
   </header>
@@ -91,51 +91,63 @@
       <!-- Acceso a cuenta -->
       
       <article class="options-acceder">
-        <h2 class="micuenta-h2">Acceder</h2>
 
-          <label for="email" class="complete-info">Email:</label>
-          <input type="email" name="email" class="info" required>
+        <form action="" class="access-form">
 
-          <label for="password" class="complete-info">Contraseña:</label>
-          <input type="password" name="password" class="info" required>
+          <h2 class="micuenta-h2">Acceder</h2>
 
-          <div class="remember-container-flex">
-              <a href="" class="forgot-password">¿Has olvidado tu contraseña?</a>
+            <label for="email" class="complete-info">Email:</label>
+            <input type="email" name="email" class="info" required>
 
-              <input type="checkbox" name="remember-me" class="remember-button">
-              <label for="remember-me" class="remember">Recuérdame</label>
-          </div>
+            <label for="password" class="complete-info">Contraseña:</label>
+            <input type="password" name="password" class="info" required>
 
-          <div class="acceder-container-flex">
-              <input type="button" value="Acceder" class="acceder">
-          </div>
+            <div class="remember-container-flex">
+                <a href="" class="forgot-password">¿Has olvidado tu contraseña?</a>
+
+                <input type="checkbox" name="remember-me" class="remember-button">
+                <label for="remember-me" class="remember">Recuérdame</label>
+            </div>
+
+            <div class="acceder-container-flex">
+                <input type="button" value="Acceder" class="acceder">
+            </div>
+
+        </form>
+
       </article>
 
       <!-- Registro de cuenta -->
 
       <article class="options-registrarse">
-        <h2 class="micuenta-h2">Registrarse</h2>
 
-          <label for="name" class="complete-info">Nombre:</label>
-          <input type="text" name="name" required>
+        <form action="" class="register-form">
 
-          <label for="last-name" class="complete-info">Apellido:</label>
-          <input type="text" name="last-name" required>
+          <h2 class="micuenta-h2">Registrarse</h2>
 
-          <label for="email" class="complete-info">Email:</label>
-          <input type="email" name="email" required>
+              <label for="name" class="complete-info">Nombre:</label>
+              <input type="text" name="name" class="info" required>
 
-          <label for="password" class="complete-info">Contraseña:</label>
-          <input type="password" name="password" required>
+              <label for="last-name" class="complete-info">Apellido:</label>
+              <input type="text" name="last-name" class="info" required>
 
-          <div class="terms-container-flex">
-            <input type="checkbox" name="terms" class="terms-checkout" required>
-            <label for="terms" class="terms"><a href="">Acepto terminos y condiciones</a></label>
-          </div>
+              <label for="email" class="complete-info">Email:</label>
+              <input type="email" name="email" class="info" required>
 
-          <div class="registrarse">
-            <input type="button" value="Registrarse" class="registrarse-button">
-          </div>
+              <label for="password" class="complete-info">Contraseña:</label>
+              <input type="password" name="password" class="info" required>
+
+              <div class="terms-container-flex">
+                <input type="checkbox" name="terms" class="terms-checkout" required>
+                <label for="terms" class="terms"><a href="">Acepto terminos y condiciones</a></label>
+              </div>
+
+              <div class="registrarse">
+                <input type="button" value="Registrarse" class="registrarse-button">
+              </div>
+
+        </form>
+
       </article>
 
     </section>
@@ -160,11 +172,18 @@
       <p class="footer-information">¡De Lunes a Sábados de 10:00 a 20:00 hs al número +54 9 11 0000-0000!</p>
     </article>
 
+    <!-- medios de pago -->
+
+    <article class="footer-part-three">
+      <p class="footer-title">Formas de pago:</p>
+      <p class="footer-information">Con tu tarjeta 3 y 6 cuotas SIN INTERES y con transferencia o efectivo hasta un 15% de descuento.</p>
+    </article>
+
 </footer>
 
 <!-- img fixed con redireccionamiento a whatsapp -->
 
-<a href="https://www.whatsapp.com" class="wsp-fixed" target="_blank"><img src="../multimedia/whatsapp.png" alt="redireccionamiento-a-nuestro-whatsapp" class="wsp-img"></a>
+<a href="https://www.whatsapp.com" class="wsp-fixed" target="_blank"><img src="../multimedia/whatsapp-green.png" alt="redireccionamiento-a-nuestro-whatsapp" class="wsp-img"></a>
 
 
     <!-- script bs -->

@@ -6,63 +6,91 @@
 
 /* tienda - mobile */
 
-.search-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-        
-    .d-flex {
-        padding: 0;
-    }
-        
-    .dropdown {
-        padding-left: 1rem;
-            }
-    }
-        
-.product-title {
-@include titles(1.4rem, 'Nunito', 600);
-margin: 0.8rem;
-    }
-        
-.product-subtitle {
-@include titles-opacity(1.1rem, 'Nunito', 0.4);
-margin: 1rem 1.2rem; 
-    }
-        
-.product-container {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-justify-items: center;
-border: 2px solid black;
-margin-bottom: 1rem;
-        
-    .product-inner {
-        border: 2px solid blue;
+.productos-main {
 
-        @extend %flex-column;
-
-        border-radius: $border-card;
-        box-shadow: $shadow-card;
-
-        justify-content: center;
-        align-items: center; 
-                 
-        margin: 0.5rem;
-        padding: 0.2rem 0;
-        width: 10rem;
-        
-        .product-inner-img {
-            .product-img {
-                max-width: 100%;
-                height: 8rem;
-            }
+    .search-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+            
+        .d-flex {
+            padding: 0;
         }
-        
-        .product-inner-text {
-            text-align: center;
+            
+        .dropdown {
+            padding-left: 1rem;
+                }
         }
+    
+    .product-main-container {
+    
+        .product-title {
+            @include titles(1.4rem, 'Nunito', 600);
+            margin: 0.8rem;
+                }
+                    
+            .product-subtitle {
+            @include titles-opacity(1.1rem, 'Nunito', 0.4);
+            margin: 1rem 1.2rem; 
+                }
+                    
+            .product-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            width: 95%;
+            border: 2px solid black;
+            margin: 0 auto 1rem auto;
+                    
+                .product-inner {
+                    border: 2px solid blue;
+            
+                    @extend %flex-column;
+            
+                    border-radius: $border-card;
+                    box-shadow: $shadow-card;
+            
+                    justify-content: center;
+                    align-items: center; 
+                             
+                    margin: 0.5rem;
+                    padding: 0.2rem 0;
+                    width: 10rem;
+                    
+                    .product-inner-img {
+                        .product-img {
+                            max-width: 100%;
+                            height: 8rem;
+                        }
+                    }
+                    
+                    .product-inner-text {
+                        text-align: center;
+            
+                        .product-name {
+                            @include titles(0.9rem, 'nunito', 500);
+                        }
+            
+                        .product-description {
+                            @include titles-opacity(0.7rem, 'nunito', 0.8);
+                        }
+            
+                        .buy {
+                            @include btn-mobile(0.2rem 1rem,'Nunito', 0.7rem);
+                            border-radius: $border-card-btn;
+                            color: whitesmoke;
+                            background-color: $btn-background;
+                            border: none;
+                            }
+            
+                        .buy:active {
+                            transform: $btn-active;
+                        }
+                        
+                    }
+                }
+            }
     }
 }
 
@@ -70,8 +98,16 @@ margin-bottom: 1rem;
 
 @media (min-width:600px){
 
-    .product-container{
-        display: flex;
+    .productos-main {
+
+        .product-main-container {
+    
+            .product-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+            }
     }
 }
 
@@ -111,7 +147,6 @@ margin-bottom: 1rem;
         .product-main-container {
             display: flex;
             flex-direction: column;
-            width: 90%;
             margin: 0 auto;
             flex: 2;
 

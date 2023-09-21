@@ -7,30 +7,60 @@
 #footer {
     background-color: $color-main;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 1;
 
     .footer-part-one,.footer-part-two,.footer-part-three{
-
-        padding: 0.5rem 0.5rem;
+        color: $color-body;
+        margin: 0.5rem auto;
+        width: 30%;
         
         .footer-title{
-            font-size: 1rem;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 400;
+            @include titles (1rem, 'Nunito', 500);
             text-align: center;
+            margin-top: 0;
         }
 
         .footer-information{
-            font-size: 0.8rem;
-            font-family: 'Nunito', sans-serif;
-            padding: 0rem 1rem;
+            @include titles (0.8rem, 'Nunito', 400);
+            padding: auto 0;
         }
     }
 
-    .footer-part-three{
-        display: none;
-    }
+}
 
+@media (min-width: 600px){
+    #footer {
+        justify-content: space-evenly;
+
+        .footer-part-one,.footer-part-two,.footer-part-three{
+            width: 20%;
+            margin: 0.5rem 1rem;
+
+            .footer-title{
+                @include titles (1.05rem, 'Nunito', 500);
+            }
+    
+            .footer-information{
+                @include titles (0.85rem, 'Nunito', 400);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    #footer {
+        justify-content: center;
+
+        .footer-part-one,.footer-part-two,.footer-part-three{
+            width: 20%;
+            margin: 0.5rem 2rem;
+
+            .footer-title{
+                @include titles (1.1rem, 'Nunito', 500);
+            }
+    
+            .footer-information{
+                @include titles (0.9rem, 'Nunito', 400);
+            }
+        }
+    }
 }
