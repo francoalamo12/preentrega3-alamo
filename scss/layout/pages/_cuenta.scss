@@ -6,6 +6,7 @@
 
 /* cuenta - mobile */
 
+/* contenedor principal */
 main .options {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,12 +15,14 @@ main .options {
     gap: 1rem;
     padding: 0.5em 1em;
         
+    /* subcontenedor para acceder */
     .options-acceder {
         @extend %flex-column;
         @extend %card-padding-margin;
         box-shadow: $shadow-card-section;
         border-radius: $border-card-section;
 
+        /* formulario */
         .access-form {
 
             .micuenta-h2 {
@@ -41,6 +44,7 @@ main .options {
                 outline: $input-outline
             }
             
+            /* 'olvide contraseña' y 'recuerdame'  */
             .remember-container-flex {
                 display: flex;
                 justify-content: flex-end;
@@ -55,7 +59,8 @@ main .options {
                         margin: 0rem 0.1rem;
                     }
                 }
-            
+        
+        /* contenedor para btn acceder */
         .acceder-container-flex {
             display: flex;
             justify-content: flex-end;
@@ -70,17 +75,24 @@ main .options {
     
             .acceder:active {
                 transform: $btn-active;
+                filter: $btn-shadow;
+            }
+
+            .acceder:hover {
+                filter: $btn-shadow;
             }
         }
     }
 }
-     
+    
+    /* subcontenedor para registrarse */
     .options-registrarse {
         @extend %flex-column;
         @extend %card-padding-margin;
         box-shadow: $shadow-card-section;
         border-radius: $border-card-section;
 
+        /* formulario */
         .register-form{
 
             .micuenta-h2 {
@@ -102,6 +114,7 @@ main .options {
                 outline: $input-outline;
             }
             
+            /* terminos y condiciones */
             .terms-container-flex {
                 display: flex;
                 justify-content: flex-end;
@@ -113,6 +126,7 @@ main .options {
                     }
                 }
             
+            /* contenedor para btn registrarse */
             .registrarse {
                 display: flex;
                 justify-content: flex-end;
@@ -127,6 +141,11 @@ main .options {
     
                 .registrarse-button:active {
                     transform: $btn-active;
+                    filter: $btn-shadow;
+                }
+
+                .registrarse-button:hover {
+                    filter: $btn-shadow;
                 }
             }
         }
@@ -147,13 +166,12 @@ main .options {
             width: 95%;
             margin: 5rem auto;
 
-            /* contenedor secundario */
+            /* subcontenedor para acceder */
             .options-acceder {
                 display: flex;
                 width: 90%;
                 flex: 1;
 
-                /* título de form*/
                 .micuenta-h2 {
                     @include titles(1.3rem, 'Nunito', 500);
                 }
@@ -163,7 +181,7 @@ main .options {
                     @include titles(0.8rem, 'Nunito', 400);
                 }
 
-                /* subcontenedor */
+                /* 'olvidé contraseña' y 'recuerdame' */
                 .remember-container-flex {
 
                     .forgot-password {
@@ -175,7 +193,7 @@ main .options {
                     }
                 }
 
-                /* subcontenedor */
+                /* contenedor para btn acceder */
                 .acceder-container-flex {
                     .acceder {
                         @include btn-mobile(0.25rem 0.8rem, 'Nunito', 0.8rem);
@@ -185,30 +203,28 @@ main .options {
 
             }
 
-            /* contenedor secundario */
+            /* subcontenedor para registrarse */
             .options-registrarse {
                 display: flex;
                 width: 90%;
                 flex: 1;
 
-                /* titulo de form */
                 .micuenta-h2 {
                     @include titles(1.3rem, 'Nunito', 500);
                 }
-        
-                /* labels */
+
                 .complete-info {
                     @include titles(0.8rem, 'Nunito', 400);
                 }
 
-                /* subcontenedor */
+                /* terminos y condiciones */
                 .terms-container-flex {
                     .terms {
                         @include titles(0.8rem, 'Nunito', 400);
                     }
                 }
 
-                /* subcontenedor */
+                /* contenedor para btn registrarse */
                 .registrarse {
                     .registrarse-button {
                         @include btn-mobile(0.25rem 0.8rem, 'Nunito', 0.8rem);
@@ -225,10 +241,11 @@ main .options {
 
     main {
 
+        /* contenedor principal */
         .options {
             margin: 5rem auto;
 
-
+            /* subcontenedor para acceder  */
             .options-acceder{
                 width: 75%;
                 max-width: 600px;
@@ -242,6 +259,7 @@ main .options {
                 }
             }
 
+            /* subcontenedor para registrarse */
             .options-registrarse{
                 width: 75%;
                 max-width: 600px;

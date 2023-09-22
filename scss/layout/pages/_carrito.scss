@@ -87,6 +87,10 @@
         .buy:active {
             transform: $btn-active;
         }
+
+        .buy:hover {
+            filter: $btn-shadow;
+        }
 }
 
 /* tablet */

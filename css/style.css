@@ -147,6 +147,7 @@ html body {
 }
 
 /* index - mobile */
+/* título compartido con todas las paginas */
 .main-h1 {
   font-size: 1.6rem;
   font-family: "Nunito";
@@ -154,6 +155,7 @@ html body {
   margin: 1rem 0.5rem;
 }
 
+/* carousel */
 #carousel-main .carousel-indicators {
   margin-left: auto;
   margin-right: auto;
@@ -171,6 +173,7 @@ html body {
   padding: 0 auto;
 }
 
+/* destacados */
 .index-main-h2 {
   font-size: 1.4rem;
   font-family: "Nunito";
@@ -179,7 +182,7 @@ html body {
   margin-top: 1.2rem;
 }
 
-/* destacados */
+/* grilla de destacados */
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -193,6 +196,8 @@ html body {
   align-items: stretch;
   max-height: 30rem;
   margin: 0.8rem;
+  /* img card */
+  /* texto card */
 }
 .highlights-grid .card-container .card-container-img {
   flex: 2;
@@ -247,15 +252,34 @@ html body {
   #carousel-main .carousel-inner .carousel-img {
     height: 30vh;
   }
-  /* higlights */
+  /* destacados */
   .index-main-h2 {
     margin-top: 1.5rem;
     font-size: 1.5rem;
   }
+  /* grilla destacados */
   .highlights-grid {
     grid-template-columns: repeat(3, 1fr);
     width: 95%;
     max-width: 900px;
+    /* card */
+  }
+  .highlights-grid .card-container {
+    /* texto card */
+  }
+  .highlights-grid .card-container .card-body {
+    /* contenedor del nombre del producto */
+    /* contenedor de la descripcion del producto */
+  }
+  .highlights-grid .card-container .card-body .card-product-container .card-product {
+    font-size: 1.1rem;
+    font-family: "nunito";
+    font-weight: 500;
+  }
+  .highlights-grid .card-container .card-body .card-description-container .card-product-description {
+    font-size: 0.9rem;
+    font-family: "nunito";
+    opacity: 0.8;
   }
 }
 /* desktop */
@@ -263,21 +287,11 @@ html body {
   .main-h1 {
     font-size: 1.7rem;
   }
-  #carousel-main {
-    /*         margin: auto;
-
-                img {
-                    height: auto;
-                } */
-  }
   #carousel-main .carousel-control-prev-icon, #carousel-main .carousel-control-next-icon {
     filter: invert(100%);
   }
   .index-main-h2 {
     font-size: 1.7rem;
-  }
-  .highlights-grid {
-    margin-inline: auto;
   }
 }
 .card-carrito .text-card, .contact .contact-others, .contact .contact-form, .productos-main .product-main-container .product-container .product-inner, main .options .options-registrarse, main .options .options-acceder, .highlights-grid .card-container {
@@ -305,16 +319,24 @@ html body {
 }
 
 /* cuenta - mobile */
+/* contenedor principal */
 main .options {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
   padding: 0.5em 1em;
+  /* subcontenedor para acceder */
+  /* subcontenedor para registrarse */
 }
 main .options .options-acceder {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  /* formulario */
+}
+main .options .options-acceder .access-form {
+  /* 'olvide contraseña' y 'recuerdame'  */
+  /* contenedor para btn acceder */
 }
 main .options .options-acceder .access-form .micuenta-h2 {
   font-size: 1.2rem;
@@ -361,10 +383,19 @@ main .options .options-acceder .access-form .acceder-container-flex .acceder {
 }
 main .options .options-acceder .access-form .acceder-container-flex .acceder:active {
   transform: scale(1.05);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+main .options .options-acceder .access-form .acceder-container-flex .acceder:hover {
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 main .options .options-registrarse {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  /* formulario */
+}
+main .options .options-registrarse .register-form {
+  /* terminos y condiciones */
+  /* contenedor para btn registrarse */
 }
 main .options .options-registrarse .register-form .micuenta-h2 {
   font-size: 1.2rem;
@@ -408,6 +439,10 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 }
 main .options .options-registrarse .register-form .registrarse .registrarse-button:active {
   transform: scale(1.05);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+main .options .options-registrarse .register-form .registrarse .registrarse-button:hover {
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 
 /* tablet */
@@ -420,17 +455,16 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
     justify-content: space-around;
     width: 95%;
     margin: 5rem auto;
-    /* contenedor secundario */
-    /* contenedor secundario */
+    /* subcontenedor para acceder */
+    /* subcontenedor para registrarse */
   }
   main .options .options-acceder {
     display: flex;
     width: 90%;
     flex: 1;
-    /* título de form*/
     /* labels */
-    /* subcontenedor */
-    /* subcontenedor */
+    /* 'olvidé contraseña' y 'recuerdame' */
+    /* contenedor para btn acceder */
   }
   main .options .options-acceder .micuenta-h2 {
     font-size: 1.3rem;
@@ -461,10 +495,8 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
     display: flex;
     width: 90%;
     flex: 1;
-    /* titulo de form */
-    /* labels */
-    /* subcontenedor */
-    /* subcontenedor */
+    /* terminos y condiciones */
+    /* contenedor para btn registrarse */
   }
   main .options .options-registrarse .micuenta-h2 {
     font-size: 1.3rem;
@@ -489,8 +521,13 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 }
 /* desktop */
 @media (min-width: 1024px) {
+  main {
+    /* contenedor principal */
+  }
   main .options {
     margin: 5rem auto;
+    /* subcontenedor para acceder  */
+    /* subcontenedor para registrarse */
   }
   main .options .options-acceder {
     width: 75%;
@@ -538,6 +575,11 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 }
 
 /* tienda - mobile */
+/* contenedor principal */
+.productos-main {
+  /* contenedor de busqueda */
+  /* contenedor de productos */
+}
 .productos-main .search-container {
   display: flex;
   justify-content: center;
@@ -553,6 +595,11 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 .productos-main .search-container .dropdown .dropdown-menu .dropdown-item:active {
   background-color: #040404;
   color: whitesmoke;
+}
+.productos-main .product-main-container {
+  /* tipo de producto */
+  /* subtipo de producto */
+  /* contenedor de cards */
 }
 .productos-main .product-main-container .product-title {
   font-size: 1.4rem;
@@ -573,6 +620,7 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
   justify-items: center;
   width: 80%;
   margin: 0 auto 1rem auto;
+  /* card */
 }
 .productos-main .product-main-container .product-container .product-inner {
   border-radius: 10px;
@@ -583,6 +631,8 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
   margin: 0.5rem;
   width: 10rem;
   height: 16rem;
+  /* img card */
+  /* texto card */
 }
 .productos-main .product-main-container .product-container .product-inner .product-inner-img {
   flex: 1;
@@ -594,6 +644,9 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 .productos-main .product-main-container .product-container .product-inner .product-inner-text {
   text-align: center;
   flex: 1;
+  /* contenedor del nombre */
+  /* contenedor de la descripción */
+  /* contenedor del btn */
 }
 .productos-main .product-main-container .product-container .product-inner .product-inner-text .product .product-name {
   font-size: 0.9rem;
@@ -627,8 +680,16 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 
 /* tablet */
 @media (min-width: 600px) {
+  /* contenedor principal */
+  .productos-main {
+    /* contenedor de busqueda */
+    /* contenedor de productos */
+  }
   .productos-main .search-container {
     justify-content: flex-end;
+  }
+  .productos-main .product-main-container {
+    /* contenedor de cards */
   }
   .productos-main .product-main-container .product-container {
     display: flex;
@@ -812,11 +873,16 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 }
 /* desktop */
 @media (min-width: 1024px) {
+  main {
+    /* contenedor principal */
+  }
   main .contact {
     display: flex;
     width: 85%;
     justify-content: space-around;
     margin: 5rem auto;
+    /* contenedor con formulario para contactar */
+    /* otras formas de contacto */
   }
   main .contact .contact-form {
     max-width: 31.25rem;
@@ -941,6 +1007,9 @@ main .options .options-acceder, main .options .options-registrarse, .contact .co
 }
 .carrito-options .buy:active {
   transform: scale(1.05);
+}
+.carrito-options .buy:hover {
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
 }
 
 /* tablet */

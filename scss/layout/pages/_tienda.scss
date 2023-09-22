@@ -6,8 +6,10 @@
 
 /* tienda - mobile */
 
+/* contenedor principal */
 .productos-main {
 
+    /* contenedor de busqueda */
     .search-container {
         display: flex;
         justify-content: center;
@@ -31,18 +33,22 @@
         }
     }
     
+    /* contenedor de productos */
     .product-main-container {
     
+        /* tipo de producto */
         .product-title {
             @include titles(1.4rem, 'Nunito', 600);
             margin: 0.8rem;
                 }
-                    
+                
+            /* subtipo de producto */
             .product-subtitle {
             @include titles-opacity(1.1rem, 'Nunito', 0.4);
             margin: 1rem 1.2rem; 
                 }
-                    
+             
+            /* contenedor de cards */
             .product-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -51,6 +57,7 @@
             width: 80%;
             margin: 0 auto 1rem auto;
                     
+                /* card */
                 .product-inner {    
                     @extend %flex-column;
             
@@ -64,6 +71,7 @@
                     width: 10rem;
                     height: 16rem;
                     
+                    /* img card */
                     .product-inner-img {
                         flex: 1;
 
@@ -73,11 +81,13 @@
                         }
                     }
                     
+                    /* texto card */
                     .product-inner-text {
                         @extend %grid-card-three-rows;
                         text-align: center;
                         flex: 1;
 
+                        /* contenedor del nombre */
                         .product {
 
                             .product-name {
@@ -86,6 +96,7 @@
                             }
                         }
 
+                        /* contenedor de la descripción */
                         .description {
 
                             .product-description {
@@ -94,6 +105,7 @@
                             }
                         }
 
+                        /* contenedor del btn */
                         .btn-tienda {
 
                             .buy {
@@ -124,14 +136,18 @@
 
 @media (min-width:600px){
 
+    /* contenedor principal */
     .productos-main {
 
+        /* contenedor de busqueda */
         .search-container {
             justify-content: flex-end;
         }
 
+        /* contenedor de productos */
         .product-main-container {
     
+            /* contenedor de cards */
             .product-container{
                 display: flex;
                 justify-content: center;

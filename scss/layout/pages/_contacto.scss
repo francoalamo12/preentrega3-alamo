@@ -151,12 +151,14 @@
 
     main {
 
+        /* contenedor principal */
         .contact {
             display: flex;
             width: 85%;
             justify-content: space-around;
             margin: 5rem auto;
             
+            /* contenedor con formulario para contactar */
             .contact-form{
                 max-width: 31.25rem;
 
@@ -165,6 +167,7 @@
                 }
             }
 
+            /* otras formas de contacto */
             .contact-others{
                 max-width: 31.25rem;
 
