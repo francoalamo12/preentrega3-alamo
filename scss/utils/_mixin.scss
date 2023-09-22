@@ -17,3 +17,8 @@
     font-family: $font;
     opacity: $opacity;
 }
+
+@mixin padding-margin ($padding,$margin){
+    padding: $padding;
+    margin: $margin;
+}

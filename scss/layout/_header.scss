@@ -20,6 +20,10 @@
         .navbar {
             background-color: $color-main;
             margin: 0 auto;
+            
+            .white {
+                filter: invert(100%);
+            }
 
             .menu {
 

@@ -21,11 +21,12 @@
 
     .carousel-inner {
         height: auto;
-        width: min(95%, 1100px);
+        width: 95%;
+        max-width: 70rem;
         margin: auto;
 
-        img {
-            height: 30vh;
+        .carousel-img {
+            height: 25vh;
         }
     }
 
@@ -55,10 +56,12 @@
         border-radius: $border-card;
         @extend %flex-column;
         align-items: stretch;
+        max-height: 30rem;
         margin: 0.8rem;
 
             .card-container-img {
                 flex: 2;
+                object-fit: fill;
                 overflow: hidden;
 
                     .card-img{
@@ -69,30 +72,45 @@
                 }
 
             .card-body {
+                @extend %grid-card-three-rows;
                 flex: 1;
                 text-align: center;
 
+                .card-product-container {
                     .card-product {
                         @include titles(1rem, 'nunito', 500);
+                        margin: auto 0;
                         }
+                }
 
+                .card-description-container {
                     .card-product-description {
                         @include titles-opacity(0.8rem, 'nunito', 0.8);
                         }
+                }
 
+                .btn-container{
                     .buy {
                         @include btn-mobile(0.2rem 1rem,'Nunito', 0.8rem);
                         border-radius: $border-card-btn;
                         color: whitesmoke;
                         background-color: $btn-background;
                         border: none;
+                        margin-bottom: 0;
+                        }
+
+                        .buy:hover {
+                            transform: $btn-active;
+                            filter: $btn-shadow;
                         }
 
                         .buy:active {
                             transform: $btn-active;
+                            filter: $btn-shadow;
                         }
-                    }
+                }
             }
+        }
 
     .card-container:hover{
         box-shadow: $shadow-card-hover;
@@ -102,13 +120,18 @@
 /* tablet */
 
 @media (min-width:600px){
-
-    /* titulo principal compartido con todas las paginas */
-    .main-h1{
-        font-size: 1.7rem;
-    }
     
-    /* ver carousel */
+    /* carousel */
+
+    #carousel-main {
+
+        .carousel-inner {
+
+            .carousel-img {
+                height: 30vh;
+            }
+        }
+    }
     
     /* higlights */
     
@@ -119,8 +142,8 @@
     
     .highlights-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 5px;
-        width: 85%;
+        width: 95%;
+        max-width: 900px;
         }
     }
 
@@ -128,17 +151,15 @@
 
 @media (min-width:1024px){
     .main-h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         }
     
     #carousel-main {
-        height: auto;
-        width: 90%;
-        margin: auto;
+/*         margin: auto;
              
             img {
                 height: auto;
-            }
+            } */
     
         .carousel-control-prev-icon,.carousel-control-next-icon{
             filter: invert(100%);
@@ -151,7 +172,6 @@
     }
     
     .highlights-grid {
-        width: min(80%, 1000px);
         margin-inline: auto;
         }
     }

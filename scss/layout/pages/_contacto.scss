@@ -57,6 +57,7 @@
     /* contenedor secundario */
     .contact-others {
         @extend %flex-column;
+        justify-content: center;
         @extend %card-padding-margin;
         box-shadow: $shadow-card-section;
         border-radius: $border-card-section;
@@ -64,19 +65,28 @@
 
         .contact-apart {
             flex: 1;
-            
-            a {
-                font-size: 0.8rem;
-                text-decoration: none;
-                color: #141313;
-                }
-    
-            img {
-                height: 2rem;
-                width: 2rem;
-                }
-        }
+            display: flex;
+            align-items: center;
 
+            .contact-subapart {
+
+                .contact-h2 {
+                    @include titles(1.2rem, 'Nunito', 500);
+                    text-align: start;
+                }
+
+                a {
+                    font-size: 0.8rem;
+                    text-decoration: none;
+                    color: #141313;
+                    }
+        
+                img {
+                    height: 2rem;
+                    width: 2rem;
+                    }
+            }      
+        }
     }
 }
 
@@ -89,35 +99,50 @@
         /* contenedor principal */
         .contact {
             display: flex;
-            width: 85%;
+            width: 95%;
             justify-content: space-around;
             margin: 5rem auto;
 
             /* subcontenedor */
             .contact-form {
                 flex: 1;
-                padding: 1rem 1.5rem;
+                width: 100%;
+                padding: 1rem;
 
                 .contact-h2 {
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
+                }
+
+                form {
+
+                    .form-label {
+                        font-size: 0.9;
+                    }
                 }
             }
 
             /* subcontenedor */
             .contact-others {
                 flex: 1;
-                padding: 1rem 1.5rem;
+                width: 100%;
+                padding: 1rem;
 
                 .contact-apart {
-                    margin-bottom: 1rem;
-                    
-                    .contact-h2{
-                        font-size: 1.3rem;
+
+                    .contact-subapart {
+
+                        .contact-h2{
+                            font-size: 1.4rem;
+                        }
+
+                        a{
+                            font-size: 0.9rem;
+                        }
                     }
+                }
             }
         }
     }
-}
 }
 
 /* desktop */
@@ -133,6 +158,7 @@
             margin: 5rem auto;
             
             .contact-form{
+                max-width: 31.25rem;
 
                 .contact-h2{
                     font-size: 1.5rem;
@@ -140,13 +166,26 @@
             }
 
             .contact-others{
+                max-width: 31.25rem;
 
                 .contact-apart {
-                    margin-bottom: 1rem;
                     
-                    .contact-h2{
-                        font-size: 1.5rem;
+                    .contact-subapart {
+
+                        .contact-h2{
+                            font-size: 1.5rem;
+                        }
+
+                        a {
+                            font-size: 1rem;
+                        }
+
+                        img {
+                            height: 2.2rem;
+                            width: 2.2rem;
+                        }
                     }
+
                 }
             }
         }
