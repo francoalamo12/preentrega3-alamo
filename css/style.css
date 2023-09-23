@@ -322,8 +322,7 @@ html body {
 /* contenedor principal */
 main .options {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   padding: 0.5em 1em;
   /* subcontenedor para acceder */
@@ -766,8 +765,7 @@ main .options .options-registrarse .register-form .registrarse .registrarse-butt
 /* contenedor principal */
 .contact {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, 1fr);
   padding: 0.5rem 1rem;
   /* contenedor secundario */
   /* contenedor secundario */

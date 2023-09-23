@@ -9,8 +9,7 @@
 /* contenedor principal */     
 .contact {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
     padding: 0.5rem 1rem;
 
     /* contenedor secundario */
